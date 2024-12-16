@@ -1,0 +1,105 @@
+:root{
+    --text-color: #ccc;
+    --back-color: #000;
+    --bar-color: #2228;
+    --button-color: #111;
+    --button-color-hover: #000;
+    --button-border: 2px solid #222;
+    --button-border-hover: 2px solid #f8c;
+    --title-color: #c8f;
+    --webpage-width: 100%;
+    --gap-amount: 10px;
+    --gap-side-amount: 20px;
+}
+
+@keyframes move{
+    from{
+        border: var(--button-border);
+        background-color: var(--button-color);
+    }
+    to{
+        border: var(--button-border-hover);
+        background-color: var(--button-color-hover);
+    }
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--back-color);
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0px;
+    max-width: var(--webpage-width);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-flow: column wrap;
+    position:fixed;
+    width: var(--webpage-width);
+}
+
+footer{
+    background-color: var(--bar-color);
+    position: fixed;
+    width: var(--webpage-width);
+    bottom: 0%;
+    padding: 10px;
+}
+
+#title-bar{
+    background-color: var(--bar-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#title-bar .title{
+    font-size: 36px;
+    color: var(--title-color);
+    text-align: center;
+    grid-column: 2;
+}
+
+#title-bar .button{
+    grid-column: 3;
+    margin: 30px;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row wrap;
+    padding: var(--gap-amount);
+    justify-content: center;
+    gap: var(--gap-amount);
+}
+
+.button{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: var(--gap-amount);
+    padding-left: var(--gap-side-amount);
+    padding-right: var(--gap-side-amount);
+    border: var(--button-border);
+    border-radius: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    size: fit-content;
+}
+
+.button:hover{
+    background-color: var(--button-color-hover);
+    color: var(--button-text-color);
+    border: var(--button-border-hover);
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    animation-duration: 250ms;
+    animation-name: move;
+    -webkit-animation-duration: 250ms;
+    -webkit-animation-name: move;
+}

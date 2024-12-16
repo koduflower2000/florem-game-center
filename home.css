@@ -1,0 +1,85 @@
+:root{
+    --padding: 10px;
+    --square-grid-size: repeat(2,1fr);
+    --width: 100%;
+    --border: 2px #c8f solid;
+    --container-color: #111;
+    --container-color-hover: #222;
+    --container-border: 2px #222 solid;
+    --container-border-hover: 2px #444 solid;
+    --container-gap: 10px;
+}
+
+main {
+    margin-top: 170px;
+    margin-bottom: 40px;
+    padding: var(--padding);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main h2.title{
+    width: var(--width);
+    padding-left: var(--padding);
+    border-bottom: var(--border);
+}
+
+.main-text{
+    font-size: 24px;
+    font-style: italic;
+    text-justify: distribute;
+    padding: 100px;
+    background-color: #408;
+    border-radius: var(--padding);
+}
+
+.trending,.categories{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: var(--container-gap);
+}
+
+.game{
+    padding: var(--padding);
+    width: minimax(200px,400px);
+    display: grid;
+    grid-template-columns: var(--square-grid-size);
+    grid-template-rows: 1fr 1fr 50px 3fr;
+    border: var(--container-border);
+    border-radius: var(--container-gap);
+    background-color: var(--container-color);
+}
+
+.game:hover{
+    border: var(--container-border-hover);
+    background-color: var(--container-color-hover);
+}
+
+.game .icon{
+    grid-column: 1;
+    grid-row: 1/span 3;
+}
+
+.game .title{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 24px;
+}
+
+.game .author{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 16px;
+}
+
+.game .button{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.game .description{
+    grid-column: 1/span 2;
+    grid-row: 4;
+    margin-top: var(--padding);
+}
