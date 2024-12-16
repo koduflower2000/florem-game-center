@@ -5,7 +5,7 @@ Florem Game Center:
 2. today's specials
 3. upcoming games
 4. consoles and more
-5. forums and FAQs
+5. forums
 6. about us and contact info
 7. log in
 
