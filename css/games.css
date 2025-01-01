@@ -1,0 +1,38 @@
+:root{
+	--content-background-color: #111;
+	--content-text-color: #ddd;
+	--content-highlight-color: #fff;
+}
+
+main{
+	grid-column: 1/1;
+	grid-row: 2/2;
+}
+
+main div.title {
+	font-size: 32px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: italic;
+	border-bottom: solid #f8c 2px;
+	margin: 5px;
+	padding-left: 10px;
+}
+main .content-placeholder {
+	display: flex;
+	flex-flow: column none;
+	justify-content: space-evenly;
+}
+
+main .content-banner {
+	grid-column: 1/span 2;
+}
+
+main .content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	height: 300;
+	width: 400;
+	background-color: var(--content-background-color);
+	color: var(--content-text-color);
+}
