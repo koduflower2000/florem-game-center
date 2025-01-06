@@ -2,6 +2,7 @@
 	--content-background-color: #111;
 	--content-text-color: #ddd;
 	--content-highlight-color: #fff;
+	--padding-and-gap: 10px;
 }
 
 main{
@@ -11,28 +12,42 @@ main{
 
 main div.title {
 	font-size: 32px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Source Code Pro", sans-serif;
+	font-weight: 300;
 	font-style: italic;
 	border-bottom: solid #f8c 2px;
 	margin: 5px;
-	padding-left: 10px;
-}
-main .content-placeholder {
-	display: flex;
-	flex-flow: column none;
-	justify-content: space-evenly;
+	padding-left: var(--padding-and-gap);
 }
 
-main .content-banner {
-	grid-column: 1/span 2;
+main .content-placeholder {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	padding-left: var(--padding-and-gap);
+	padding-right: var(--padding-and-gap);
 }
 
 main .content {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	height: 300;
-	width: 400;
+	grid-template-columns: 200px 200px;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 300px;
+	width: 400px;
 	background-color: var(--content-background-color);
 	color: var(--content-text-color);
+	border-radius: 10px;
+}
+
+main .content.banner{
+	grid-column: 1/span 2;
+	grid-row: 1;
+	width: 2vw;
+	height: 1.5vw;
+}
+
+main .content.title{
+	font-size: 1.5vw;
+	font-style: normal;
+	font-weight: 200;
 }

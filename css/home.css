@@ -11,8 +11,8 @@
 }
 
 main {
-    margin-top: 170px;
-    margin-bottom: 40px;
+    grid-column: 1/1;
+    grid-row: 2/2;
     padding: var(--padding);
     display: flex;
     flex-flow: row wrap;
@@ -22,6 +22,8 @@ main h2.title{
     width: var(--width);
     padding-left: var(--padding);
     border-bottom: var(--border);
+    font-size: 32px;
+    font-style: italic;
 }
 
 .main-text{
