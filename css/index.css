@@ -29,7 +29,7 @@ body {
     background-color: var(--back-color);
     display: grid;
     grid-template-columns: 5fr;
-    grid-template-rows: 175px 3fr 40px;
+    grid-template-rows: 200px 3fr 40px;
     margin: 0px;
     max-width: var(--webpage-width);
     font-family: "Source Code Pro", sans-serif;
