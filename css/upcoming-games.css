@@ -1,4 +1,4 @@
-:root {
+:root{
 	/* content appearance */
     --content-width: 400px;
     --content-height: 300px;
@@ -11,23 +11,18 @@
 	/* content title */
 	--content-title-color: #fff;
 	--content-title-size: 20px;
-	/* content arrangement */
-	--content-banner-grid-column: 0;
-	--content-banner-grid-row: 0;
-	--content-title-grid-column: 0;
-	--content-title-grid-row: 0;
-	--border: #c8f solid 2px;
+    /* general values */
+    --width: 100%;
+    --padding: 10px;
+    --border: #c8f solid 2px;
 }
 
-@keyframes content-scale{
-    from{height: 0%;}
-	to	{height: 100%;}
-}
-
-main {
-	grid-column: 1/1;
-	grid-row: 2/2;
-	padding: var(--content-padding);
+main{
+    grid-column: 1/1;
+    grid-row: 2/2;
+    padding: var(--padding);
+    display: flex;
+    flex-flow: row wrap;
 }
 
 main h2.title{
@@ -39,7 +34,7 @@ main h2.title{
 }
 
 main .description{
-    padding: 100px;
+    padding: 10%;
     font-size: 24px;
     background-color: #111;
     border-radius: 10px;
@@ -53,7 +48,7 @@ main .content-placeholder{
     gap: var(--content-gap);
 }
 
-main .content{
+main .content-placeholder .content{
     width: var(--content-width);
     height: var(--content-height);
 	display: grid;
@@ -63,14 +58,6 @@ main .content{
     background-color: var(--content-background-color);
     border: var(--content-border);
     border-radius: var(--content-border-radius);
-}
-
-main .content:hover{
-	animation-name: content-scale;
-	-webkit-animation-name: content-scale;
-	animation-duration: 0.25s;
-	-webkit-animation-duration: 0.25s;
-	height: 100%;
 }
 
 main .content .content-banner{
@@ -104,7 +91,7 @@ main .content .content-population{
 
 main .content .content-button{
 	width: 80px;
-	height: fit-content;
+	height: 40px;
 	background-color: #000;
 	color: #ccc;
 	border: #f8c solid 2px;
@@ -113,7 +100,6 @@ main .content .content-button{
 	font-style: italic;
 	font-weight: 200;
 	text-decoration: none;
-	text-align: center;
 	padding: 10px 20px 10px 20px;
 }
 
@@ -128,8 +114,8 @@ main .content .content-description{
 }
 
 main .content:hover .content-description{
-	animation-name: content-scale;
-	-webkit-animation-name: content-scale;
+	animation-name: content-description-scale;
+	-webkit-animation-name: content-description-scale;
 	animation-duration: 0.25s;
 	-webkit-animation-duration: 0.25s;
 	height: 100%;

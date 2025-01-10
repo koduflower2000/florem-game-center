@@ -29,24 +29,26 @@ body {
     background-color: var(--back-color);
     display: grid;
     grid-template-columns: 5fr;
-    grid-template-rows: 190px 3fr 40px;
+    grid-template-rows: 180px 3fr 40px;
     margin: 0px;
     max-width: var(--webpage-width);
-    font-family: "Source Code Pro", sans-serif;
+    font-family: "Source Code Pro",'Courier New', Courier, monospace;
 }
 
 header{
     grid-column: 1/1;
     grid-row: 1/1;
+    z-index: 1;
     display: flex;
     flex-flow: column wrap;
-    position:fixed;
+    position: fixed;
     width: var(--webpage-width);
 }
 
 footer{
     grid-column: 1/1;
     grid-row: 2/2;
+    z-index: 1;
     background-color: var(--bar-color);
     position: fixed;
     width: var(--webpage-width);
@@ -63,21 +65,21 @@ footer{
 }
 
 #title-bar .title{
-    font-size: 3vw;
+    font-size: 48px;
     font-weight: 200;
     color: var(--title-color);
     text-align: center;
-    grid-column: 2;
+    grid-column: 2/2;
 }
 
 #title-bar .button{
-    grid-column: 3;
-    margin: 30px;
+    grid-column: 3/3;
+    margin: 48px;
 }
 
 #navbar{
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
     padding: var(--gap-amount);
     justify-content: center;
     gap: var(--gap-amount);
@@ -94,8 +96,9 @@ footer{
     border-radius: 40px;
     text-align: center;
     text-decoration: none;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 1.5vw;
+    font-family: 'Space Grotesk','Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
     size: fit-content;
 }
 
@@ -103,10 +106,6 @@ footer{
     background-color: var(--button-color-hover);
     color: var(--button-text-color);
     border: var(--button-border-hover);
-    position: relative;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
     animation-duration: 250ms;
     animation-name: move;
     -webkit-animation-duration: 250ms;
