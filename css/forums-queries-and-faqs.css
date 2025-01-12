@@ -1,0 +1,28 @@
+:root {
+    --content-back-color: #111;
+    --content-text-color: #ccc;
+    --border: #c8f solid 2px;
+}
+
+main {
+	grid-column: 1/1;
+	grid-row: 2/2;
+	padding: var(--content-gap-and-padding);
+}
+
+main h2.title{
+    width: var(--width);
+    padding-left: var(--padding);
+    border-bottom: var(--border);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+main .question-content{
+    background-color: var(--content-back-color);
+    color: var(--content-text-color);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 100px;
+}

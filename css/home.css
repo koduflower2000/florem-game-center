@@ -30,7 +30,7 @@ main h2.title{
 .main-text{
     font-size: 24px;
     font-style: italic;
-    text-justify: distribute;
+    text-align: left;
     padding: 8%;
     background-color: #408;
     border-radius: var(--padding);
