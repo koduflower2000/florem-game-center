@@ -1,33 +1,33 @@
-:root {
-	/* content appearance */
-    --content-width: 400px;
-    --content-height: 300px;
-	--content-text-color: #ccc;
+:root{
+	/* size and section */
+	--width: 100%;
+	--height: auto;
+	/* global border elements */
+	--border: #f8c solid 2px;
+	/* game content */
 	--content-background-color: #111;
-	--content-border: #222 0px solid;
-	--content-border-radius: 10px;
-	--content-gap: 10px;
-	--content-padding: 10px;
-	/* content title */
-	--content-title-color: #fff;
-	--content-title-size: 20px;
-	/* content arrangement */
-	--content-banner-grid-column: 0;
-	--content-banner-grid-row: 0;
-	--content-title-grid-column: 0;
-	--content-title-grid-row: 0;
-	--border: #c8f solid 2px;
+	--content-text-color: #ccc;
+	--content-gap-and-padding: 10px;
+	--content-description-height: 0%;
+	--content-description-hover-height: 100%;
+	/* game content buttons */
+	--content-button-back-color: #111;
 }
 
 @keyframes content-scale{
-    from{height: 0%;}
-	to	{height: 100%;}
+    from{scale: relative; height: 100%;}
+	to	{scale: relative; height: 150%;}
+}
+
+@keyframes content-description-scale{
+	from{scale: relative; height: var(--content-description-height);}
+	to	{scale: relative; height: var(--content-description-hover-height);}
 }
 
 main {
 	grid-column: 1/1;
 	grid-row: 2/2;
-	padding: var(--content-padding);
+	padding: var(--content-gap-and-padding);
 }
 
 main h2.title{
@@ -48,89 +48,65 @@ main .description{
 main .content-placeholder{
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-    gap: var(--content-gap);
+	justify-content: left;
+	align-items: flex-start;
+    gap: var(--content-gap-and-padding);
 }
 
 main .content{
-    width: var(--content-width);
-    height: var(--content-height);
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
-	grid-template-rows: 50% 10% 10% 20%;
-    color: var(--content-text-color);
-    background-color: var(--content-background-color);
-    border: var(--content-border);
-    border-radius: var(--content-border-radius);
+	grid-template-rows: fit-content 30px 20px 10px min-content;
+	min-width: 100px;
+	max-width: 30%;
+	height: 100%;
+	background-color: var(--content-background-color);
+	color: var(--content-text-color);
+	border-radius: 10px;
+	padding: var(--content-gap-and-padding);
+	gap: var(--content-gap-and-padding);
 }
 
 main .content:hover{
-	animation-name: content-scale;
-	-webkit-animation-name: content-scale;
-	animation-duration: 0.25s;
-	-webkit-animation-duration: 0.25s;
-	height: 100%;
+	height: max-content;
 }
 
-main .content .content-banner{
+main .content-banner{
 	grid-column: 1/span 2;
 	grid-row: 1/1;
-	width: 100%;
-	height: 100%;
+	background-color: var(--content-background-color);
 	border-radius: 10px 10px 0% 0%;
 }
 
-main .content .content-title{
-	grid-column: 1/span 2;
+main .content-title{
+	grid-column: 1/1;
 	grid-row: 2/2;
-	font-size: 24px;
-	padding-left: var(--content-padding);
 }
 
-main .content .content-author{
+main .content-author{
 	grid-column: 1/1;
 	grid-row: 3/3;
-	font-size: 20px;
-	padding-left: var(--content-padding);
 }
 
-main .content .content-population{
+main .content-population{
 	grid-column: 1/1;
 	grid-row: 4/4;
-	font-size: 12px;
-	padding-left: var(--content-padding);
 }
 
-main .content .content-button{
-	width: 80px;
-	height: fit-content;
-	background-color: #000;
-	color: #ccc;
-	border: #f8c solid 2px;
-	border-radius: 20px;
-	font-size: 16px;
-	font-style: italic;
-	font-weight: 200;
-	text-decoration: none;
-	text-align: center;
-	padding: 10px 20px 10px 20px;
+main .content-button{
+	grid-column: 2/2;
+	grid-row: 3/span 4;
 }
 
-main .content .content-description{
+main .content-description{
 	grid-column: 1/span 2;
 	grid-row: 5/5;
-	font-size: 16px;
-	padding: var(--content-padding);
-	overflow: hidden;
-	text-align: justify;
 	height: 0%;
+	overflow: hidden;
 }
 
 main .content:hover .content-description{
-	animation-name: content-scale;
-	-webkit-animation-name: content-scale;
-	animation-duration: 0.25s;
-	-webkit-animation-duration: 0.25s;
-	height: 100%;
+	animation-name: content-description-scale;
+	animation-duration: 0.5s;
+	--content-description-height: 100%;
 }
