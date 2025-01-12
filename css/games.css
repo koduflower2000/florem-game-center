@@ -56,10 +56,9 @@ main .content-placeholder{
 main .content{
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
-	grid-template-rows: fit-content 30px 20px 10px min-content;
+	grid-template-rows: 150px 30px 20px 10px min-content;
 	min-width: 100px;
 	max-width: 30%;
-	height: 100%;
 	background-color: var(--content-background-color);
 	color: var(--content-text-color);
 	border-radius: 10px;
