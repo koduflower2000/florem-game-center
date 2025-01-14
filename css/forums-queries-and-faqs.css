@@ -1,18 +1,29 @@
 :root {
+    --padding-and-gap: 10px;
     --content-back-color: #111;
     --content-text-color: #ccc;
-    --border: #c8f solid 2px;
+    --text-box-back-color: #000;
+    --text-box-text-color: #ccc;
+    --border: #f8c solid 2px;
+    /* button colors */
+    --button-color: #111;
+    --button-text-color: #ccc;
+    --button-border: 2px solid #222;
+    /* button hover colors*/
+    --button-color-hover: #000;
+    --button-text-color-hover: #fff;
+    --button-border-hover: 2px solid #f8c;
 }
 
 main {
 	grid-column: 1/1;
 	grid-row: 2/2;
-	padding: var(--content-gap-and-padding);
+	padding: var(--padding-and-gap);
 }
 
 main h2.title{
     width: var(--width);
-    padding-left: var(--padding);
+    padding-left: var(--padding-and-gap);
     border-bottom: var(--border);
     font-size: 32px;
     font-style: italic;
@@ -25,4 +36,49 @@ main .question-content{
     border-radius: 10px;
     margin: 10px;
     padding: 100px;
+}
+
+section.forums{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+section.forums form{
+    grid-column: 2/2;
+    display: flex;
+    flex-flow: column wrap;
+    padding: var(--padding-and-gap);
+}
+
+form .content{
+    grid-column: 2/2;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--content-back-color);
+    padding: var(--padding-and-gap);
+    border-radius: var(--padding-and-gap);
+    gap: var(--padding-and-gap);
+}
+
+#Name,#Address,#Message{
+    background-color: var(--text-box-back-color);
+    color: var(--text-box-text-color);
+    border: 0px solid #0000;
+    border-bottom: var(--border);
+    border-radius: 5px;
+}
+
+#Submit{
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: var(--button-border);
+    border-radius: 20px;
+}
+
+#Submit:hover{
+    background-color: var(--button-color-hover);
+    color: var(--button-text-color-hover);
+    border: var(--button-border-hover);
+    border-radius: 20px;
 }

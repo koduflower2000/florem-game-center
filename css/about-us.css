@@ -1,0 +1,66 @@
+:root{
+    --padding-and-gap: 10px;
+    /* content border */
+    --border: 2px solid #f8c;
+    --background-color: #111;
+}
+
+main {
+	grid-column: 1/1;
+	grid-row: 2/2;
+	padding: var(--padding-and-gap);
+}
+
+main .title{
+    width: var(--width);
+    border-bottom: var(--border);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+main .description{
+    padding: 100px;
+    font-size: 24px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+main .list{
+    display: flex;
+    flex-flow: column nowrap;
+    height: max-content;
+}
+
+main .list-element{
+    display: grid;
+    grid-template-columns: 220px 5fr;
+    grid-template-rows: repeat(5,1fr);
+    gap: var(--padding-and-gap);
+    background-color: color-mix(in srgb, color percentage, color percentage);
+    padding: var(--padding-and-gap);
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+main .list-element img{
+    grid-column: 1/1;
+    grid-row: 1/span 5;
+    background-color: var(--background-color);
+    border-radius: var(--padding-and-gap);
+}
+
+main .list-element-title{
+    grid-column: 2/2;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+main .list-element-desc{
+    grid-column: 2/2;
+    font-size: 20px;
+}
+main .list-element-time{
+    grid-column: 2/2;
+}

@@ -1,0 +1,95 @@
+:root {
+    --padding-and-gap: 10px;
+    /* content border */
+    --width: 100%;
+    --border: 2px solid #f8c;
+    --background-color: #111;
+    /* button configurations */
+    --button-color: #111;
+    --button-color-hover: #000;
+    --button-text-color: #ccc;
+    --button-text-color-hover: #fff;
+    --button-border: 2px solid #222;
+    --button-border-hover: 2px solid #f8c;
+    --button-radius: 40px;
+    --button-padding: 7px 14px 7px 14px;
+}
+
+main {
+    grid-column: 1/1;
+    grid-row: 2/2;
+    padding: var(--padding-and-gap);
+}
+
+main .title {
+    width: var(--width);
+    border-bottom: var(--border);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+main .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    width: var(--width);
+    gap: var(--padding-and-gap);
+}
+
+main .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr min-content;
+    background-color: var(--background-color);
+    padding: var(--padding-and-gap);
+    border-radius: var(--padding-and-gap);
+}
+
+main .item img {
+    grid-column: 1/span 2;
+    grid-row: 1/1;
+    position: relative;
+    width: var(--width);
+    background-color: #000;
+}
+
+main .item .item-details {
+    grid-column: 1/span 2;
+    grid-row: 2/2;
+}
+
+main .item .item-buttons {
+    grid-column: 1/span 2;
+    grid-row: 3/3;
+}
+
+main .item .item-details,
+.item-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--padding-and-gap);
+    align-items: left;
+    justify-content: center;
+}
+
+main .item .item-buttons {
+    flex-flow: row wrap;
+}
+
+main .item .item-buttons #buy-now,
+#add {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: var(--button-border);
+    border-radius: 20px;
+    padding: var(--button-padding);
+    text-align: center;
+    text-decoration: none;
+}
+
+main .item .item-buttons #buy-now:hover,
+#add:hover {
+    background-color: var(--button-color-hover);
+    color: var(--button-text-color-hover);
+    border: var(--button-border-hover);
+}

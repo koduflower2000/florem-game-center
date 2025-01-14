@@ -1,4 +1,4 @@
-:root{
+:root {
 	/* size and section */
 	--width: 100%;
 	--height: auto;
@@ -7,105 +7,124 @@
 	/* game content */
 	--content-background-color: #111;
 	--content-text-color: #ccc;
-	--content-gap-and-padding: 10px;
+	--padding-and-gap: 10px;
 	--content-description-height: 0%;
 	--content-description-hover-height: 100%;
+	--content-corner-curvature: 10px;
 	/* game content buttons */
-	--content-button-back-color: #111;
+	--button-back-color: var(--content-background-color);
+	--button-back-color-hover: #000;
+	--button-text-color: var(--content-text-color);
+	--button-text-color-hover: #fff;
+	--button-border: 2px solid #222;
+	--button-border-hover: 2px solid #f8c;
+	--button-padding: 10px 20px;
+	--button-corner-curvature: 40px;
 }
 
-@keyframes content-scale{
-    from{scale: relative; height: 100%;}
-	to	{scale: relative; height: 150%;}
+@keyframes grow {
+	from {height: 0%;}
+	to   {height: 100%;}
 }
 
-@keyframes content-description-scale{
-	from{scale: relative; height: var(--content-description-height);}
-	to	{scale: relative; height: var(--content-description-hover-height);}
+@keyframes content-grow {
+	from {height: min-content;}
+	to	 {height: 100%;}
 }
 
 main {
 	grid-column: 1/1;
 	grid-row: 2/2;
-	padding: var(--content-gap-and-padding);
+	padding: var(--padding-and-gap);
 }
 
-main h2.title{
-    width: var(--width);
-    border-bottom: var(--border);
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 200;
+main h2.title {
+	width: var(--width);
+	border-bottom: var(--border);
+	font-size: 32px;
+	font-style: italic;
+	font-weight: 200;
 }
 
-main .description{
-    padding: 100px;
-    font-size: 24px;
-    background-color: #111;
-    border-radius: 10px;
+main .description {
+	padding: 100px;
+	font-size: 24px;
+	background-color: #111;
+	border-radius: 10px;
+	margin: 0 0 var(--padding-and-gap) 0;
 }
 
-main .content-placeholder{
+main .content-placeholder {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: left;
-	align-items: flex-start;
-    gap: var(--content-gap-and-padding);
+	justify-content: space-evenly;
+	gap: var(--padding-and-gap);
 }
 
-main .content{
+main .content {
 	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	grid-template-rows: fit-content 30px 20px 10px min-content;
-	min-width: 300px;
-	max-width: 500px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	gap: var(--padding-and-gap);
+	width: 400px;
 	background-color: var(--content-background-color);
 	color: var(--content-text-color);
-	border-radius: 10px;
-	padding: var(--content-gap-and-padding);
-	gap: var(--content-gap-and-padding);
+	border-radius: var(--content-corner-curvature);
 }
 
-main .content:hover{
-	height: max-content;
-}
-
-main .content-banner{
-	grid-column: 1/span 2;
+main .content img {
+	grid-column: 1/span 3;
 	grid-row: 1/1;
-	background-color: var(--content-background-color);
-	border-radius: 10px 10px 0% 0%;
+	position: relative;
+	width: 100%;
+	height: 200px;
 }
 
-main .content-title{
-	grid-column: 1/1;
-	grid-row: 2/2;
-}
-
-main .content-author{
-	grid-column: 1/1;
-	grid-row: 3/3;
-}
-
-main .content-population{
-	grid-column: 1/1;
-	grid-row: 4/4;
-}
-
-main .content-button{
-	grid-column: 2/2;
-	grid-row: 3/span 4;
-}
-
-main .content-description{
+main .content-stats {
 	grid-column: 1/span 2;
-	grid-row: 5/5;
-	height: 0%;
-	overflow: hidden;
+	grid-row: 2/2;
+	display: flex;
+	flex-flow: column wrap;
+	padding-left: var(--padding-and-gap);
 }
 
-main .content:hover .content-description{
-	animation-name: content-description-scale;
-	animation-duration: 0.5s;
-	--content-description-height: 100%;
+main .content-stats .content-title {
+	font-size: 24px;
+	font-weight: 300px;
+}
+
+main .content-button {
+	grid-column: 3/3;
+	grid-row: 2/2;
+	margin: auto auto;
+	background-color: var(--button-back-color);
+	color: var(--button-text-color);
+	border: var(--button-border);
+	padding: var(--button-padding);
+	border-radius: var(--button-corner-curvature);
+	font-family: 'Space Grotesk', 'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+}
+
+main .content-button:hover {
+	background-color: var(--button-back-color-hover);
+	color: var(--button-text-color-hover);
+	border: var(--button-border-hover);
+}
+
+main .content-description {
+	grid-column: 1/span 3;
+	grid-row: 3/3;
+	padding: 0 var(--padding-and-gap) var(--padding-and-gap) var(--padding-and-gap);
+	text-align: justify;
+	overflow: hidden;
+	height: 0%;
+}
+
+main .content:hover .content-description {
+	-webkit-animation-name: grow;
+	animation-name: grow;
+	-webkit-animation-duration: 500ms;
+	animation-duration: 500ms;
+	height: 100%;
 }
