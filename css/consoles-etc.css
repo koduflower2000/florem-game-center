@@ -31,7 +31,7 @@ main .title {
 
 main .items {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     width: var(--width);
     gap: var(--padding-and-gap);
 }
@@ -43,6 +43,7 @@ main .item {
     background-color: var(--background-color);
     padding: var(--padding-and-gap);
     border-radius: var(--padding-and-gap);
+    gap: var(--padding-and-gap);
 }
 
 main .item img {
@@ -70,6 +71,23 @@ main .item .item-details,
     gap: var(--padding-and-gap);
     align-items: left;
     justify-content: center;
+}
+
+main .item .item-title{
+    font-size: 20px;
+}
+
+main .item .item-price-tag{
+    font-size: 16px;
+}
+
+main .item .item-description{
+    text-align: justify;
+    margin: 0 0 auto 0;
+    min-height: auto;
+    max-height: 200px;
+    overflow: scroll;
+    font-size: 12px;
 }
 
 main .item .item-buttons {

@@ -63,7 +63,7 @@ main .content-placeholder {
 
 main .content {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, auto);
 	gap: var(--padding-and-gap);
 	width: 400px;
@@ -73,7 +73,7 @@ main .content {
 }
 
 main .content img {
-	grid-column: 1/span 3;
+	grid-column: 1/span 2;
 	grid-row: 1/1;
 	position: relative;
 	width: 100%;
@@ -81,7 +81,7 @@ main .content img {
 }
 
 main .content-stats {
-	grid-column: 1/span 2;
+	grid-column: 1/1;
 	grid-row: 2/2;
 	display: flex;
 	flex-flow: column wrap;
@@ -94,7 +94,7 @@ main .content-stats .content-title {
 }
 
 main .content-button {
-	grid-column: 3/3;
+	grid-column: 2/2;
 	grid-row: 2/2;
 	margin: auto auto;
 	background-color: var(--button-back-color);
@@ -113,7 +113,7 @@ main .content-button:hover {
 }
 
 main .content-description {
-	grid-column: 1/span 3;
+	grid-column: 1/span 2;
 	grid-row: 3/3;
 	padding: 0 var(--padding-and-gap) var(--padding-and-gap) var(--padding-and-gap);
 	text-align: justify;

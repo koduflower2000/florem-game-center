@@ -29,7 +29,7 @@ body {
     background-color: var(--back-color);
     display: grid;
     grid-template-columns: 5fr;
-    grid-template-rows: 200px 3fr 40px;
+    grid-template-rows: auto 3fr auto;
     margin: 0px;
     max-width: var(--webpage-width);
     font-family: "Source Code Pro",'Courier New', Courier, monospace;
@@ -41,19 +41,22 @@ header{
     z-index: 1;
     display: flex;
     flex-flow: column wrap;
-    position: fixed;
+    position: static;
     width: var(--webpage-width);
 }
 
 footer{
     grid-column: 1/1;
     grid-row: 3/3;
-    z-index: 1;
     background-color: var(--bar-color);
-    position: fixed;
-    width: var(--webpage-width);
+    display: inline;
     bottom: 0%;
     padding: 10px;
+}
+
+footer section{
+    display: flex;
+    flex-flow: column wrap;
 }
 
 #title-bar{
@@ -66,15 +69,16 @@ footer{
 
 #title-bar .title{
     font-size: 48px;
-    font-weight: 200;
+    font-weight: 300;
     color: var(--title-color);
     text-align: center;
     grid-column: 2/2;
+    padding: auto auto;
 }
 
 #title-bar .button{
     grid-column: 3/3;
-    margin: 48px;
+    margin: auto auto;
 }
 
 #navbar{
