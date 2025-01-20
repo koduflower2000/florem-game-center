@@ -9,8 +9,8 @@
     --button-border-hover: 2px solid #f8c;
     --title-color: #c8f;
     --webpage-width: 100%;
-    --gap-amount: 10px;
-    --gap-side-amount: 20px;
+    --padding-and-gap: 10px;
+    --padding-and-side-gap: 20px;
 }
 
 @keyframes move{
@@ -29,7 +29,7 @@ body {
     background-color: var(--back-color);
     display: grid;
     grid-template-columns: 5fr;
-    grid-template-rows: auto 3fr auto;
+    grid-template-rows: 200px 3fr auto;
     margin: 0px;
     max-width: var(--webpage-width);
     font-family: "Source Code Pro",'Courier New', Courier, monospace;
@@ -41,22 +41,8 @@ header{
     z-index: 1;
     display: flex;
     flex-flow: column wrap;
-    position: static;
+    position: fixed;
     width: var(--webpage-width);
-}
-
-footer{
-    grid-column: 1/1;
-    grid-row: 3/3;
-    background-color: var(--bar-color);
-    display: inline;
-    bottom: 0%;
-    padding: 10px;
-}
-
-footer section{
-    display: flex;
-    flex-flow: column wrap;
 }
 
 #title-bar{
@@ -65,15 +51,22 @@ footer section{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr;
+    height: 120px;
+}
+
+#title-bar img{
+    size: 100px;
+    padding: var(--padding-and-gap);
 }
 
 #title-bar .title{
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 300;
     color: var(--title-color);
     text-align: center;
     grid-column: 2/2;
-    padding: auto auto;
+    padding: var(--padding-and-gap);
+    margin: auto;
 }
 
 #title-bar .button{
@@ -84,18 +77,18 @@ footer section{
 #navbar{
     display: flex;
     flex-flow: row wrap;
-    padding: var(--gap-amount);
+    padding: var(--padding-and-gap);
     justify-content: center;
-    gap: var(--gap-amount);
+    gap: var(--padding-and-gap);
     background-color: var(--navbar-background-color);
 }
 
 .button{
     background-color: var(--button-color);
     color: var(--text-color);
-    padding: var(--gap-amount);
-    padding-left: var(--gap-side-amount);
-    padding-right: var(--gap-side-amount);
+    padding: var(--padding-and-gap);
+    padding-left: var(--padding-and-side-gap);
+    padding-right: var(--padding-and-side-gap);
     border: var(--button-border);
     border-radius: 40px;
     text-align: center;
@@ -114,4 +107,18 @@ footer section{
     animation-name: move;
     -webkit-animation-duration: 250ms;
     -webkit-animation-name: move;
+}
+
+footer{
+    grid-column: 1/1;
+    grid-row: 3/3;
+    background-color: var(--bar-color);
+    display: inline;
+    bottom: 0%;
+    padding: 10px;
+}
+
+footer section{
+    display: flex;
+    flex-flow: column wrap;
 }

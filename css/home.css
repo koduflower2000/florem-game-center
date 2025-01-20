@@ -4,10 +4,10 @@
     --width: 100%;
     --border: 2px #c8f solid;
     --container-color: #111;
-    --container-color-hover: #222;
+    --container-color-hover: #102;
     --container-border: 2px #222 solid;
-    --container-border-hover: 2px #444 solid;
-    --container-gap: 10px;
+    --container-border-hover: 2px #204 solid;
+    --container-gap: var(--padding);
 }
 
 main {
@@ -16,10 +16,10 @@ main {
     padding: var(--padding);
     display: flex;
     flex-flow: row wrap;
+    margin-top: auto;
 }
 
 main h2.title{
-    width: var(--width);
     padding-left: var(--padding);
     border-bottom: var(--border);
     font-size: 32px;
@@ -27,25 +27,55 @@ main h2.title{
     font-weight: 200;
 }
 
-.main-text{
+.landing-section{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.landing-section .main-text{
     font-size: 24px;
     font-style: italic;
     text-align: left;
     padding: 8%;
     background-color: #408;
+    background-image: url(../img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.jpg);
+    background-position: 50%;
     border-radius: var(--padding);
+}
+
+.services{
+    width: var(--width);
+    padding: 0;
+    margin: 0;
+}
+
+.services .service-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: min-content;
+    gap: var(--container-gap);
+    list-style-type: none;
+    padding: 0;
+}
+
+.services .service-list li ul{
+    background-color: var(--container-color-hover);
+    padding: var(--padding);
+    border-radius: var(--container-gap);
+    list-style-type: none;
 }
 
 .trending,.categories{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(300px,1fr));
+    overflow: scroll;
     gap: var(--container-gap);
 }
 
 .game{
     padding: var(--padding);
-    width: minimax(200px,400px);
+    width: fit-content;
     display: grid;
     grid-template-columns: var(--square-grid-size);
     grid-template-rows: 1fr 1fr 50px 3fr;

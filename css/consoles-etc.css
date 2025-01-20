@@ -13,12 +13,26 @@
     --button-border-hover: 2px solid #f8c;
     --button-radius: 40px;
     --button-padding: 7px 14px 7px 14px;
+    /* search filter button configurations */
+    --sf-button-color: #204;
+    --sf-button-color-hover: #408;
+    --sf-button-text-color: #dbf;
+    --sf-button-text-color-hover: #fff;
+    --sf-button-border: 2px solid var(--sf-button-color-hover);
+    --sf-button-border-hover: 2px solid var(--sf-button-color);
 }
 
 main {
     grid-column: 1/1;
     grid-row: 2/2;
     padding: var(--padding-and-gap);
+}
+
+main div.search-filter{
+    display: flex;
+    flex-flow: row wrap;
+    padding: var(--padding-and-gap);
+    gap: var(--padding-and-gap);
 }
 
 main .title {
