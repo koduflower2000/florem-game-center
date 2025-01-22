@@ -63,8 +63,8 @@ main .item {
 main .item img {
     grid-column: 1/span 2;
     grid-row: 1/1;
-    position: relative;
     width: var(--width);
+    height: auto;
     background-color: #000;
 }
 

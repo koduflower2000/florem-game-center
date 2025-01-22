@@ -113,12 +113,35 @@ footer{
     grid-column: 1/1;
     grid-row: 3/3;
     background-color: var(--bar-color);
-    display: inline;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     bottom: 0%;
     padding: 10px;
 }
 
-footer section{
+footer div{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div.socials{
+    grid-column: 1/1;
+}
+
+footer div.terms{
+    grid-column: 2/2;
+}
+
+div a {
+    grid-column: 1/1;
+    color: #c8f;
+    text-align: center;
+    padding: var(--padding-and-gap) var(--padding-and-side-gap);
+    gap: var(--padding-and-gap);
+}
+
+div a:hover {
+    color: #dbf;
 }
