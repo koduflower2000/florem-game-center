@@ -7,7 +7,12 @@
     --button-color-hover: #000;
     --button-border: 2px solid #222;
     --button-border-hover: 2px solid #f8c;
+    --link-color: #c8f;
+    --link-color-hover: #000;
+    --link-back-color: #0000;
+    --link-back-color-hover: var(--link-color);
     --title-color: #c8f;
+    --title-border: 2px solid #c8f;
     --webpage-width: 100%;
     --padding-and-gap: 10px;
     --padding-and-side-gap: 20px;
@@ -83,6 +88,20 @@ header{
     background-color: var(--navbar-background-color);
 }
 
+main {
+    grid-column: 1/1;
+    grid-row: 2/2;
+    padding: var(--padding-and-gap);
+}
+
+main h2.title {
+    width: var(--width);
+    border-bottom: var(--title-border);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 200;
+}
+
 .button{
     background-color: var(--button-color);
     color: var(--text-color);
@@ -126,22 +145,32 @@ footer div{
     justify-content: center;
 }
 
-footer div.socials{
+footer div#socials{
     grid-column: 1/1;
 }
 
-footer div.terms{
+footer div#terms{
     grid-column: 2/2;
+}
+
+footer div#copyright {
+    grid-column: 1/snap 2;
+    text-align: center;
+    padding: 0 auto;
 }
 
 div a {
     grid-column: 1/1;
-    color: #c8f;
+    background-color: var(--link-back-color);
+    color: var(--link-color);
     text-align: center;
     padding: var(--padding-and-gap) var(--padding-and-side-gap);
     gap: var(--padding-and-gap);
+    border-radius: var(--padding-and-gap);
+    text-decoration: none;
 }
 
 div a:hover {
-    color: #dbf;
+    background-color: var(--link-back-color-hover);
+    color: var(--link-color-hover);
 }

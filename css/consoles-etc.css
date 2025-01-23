@@ -22,25 +22,11 @@
     --sf-button-border-hover: 2px solid var(--sf-button-color);
 }
 
-main {
-    grid-column: 1/1;
-    grid-row: 2/2;
-    padding: var(--padding-and-gap);
-}
-
 main div.search-filter{
     display: flex;
     flex-flow: row wrap;
     padding: var(--padding-and-gap);
     gap: var(--padding-and-gap);
-}
-
-main .title {
-    width: var(--width);
-    border-bottom: var(--border);
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 200;
 }
 
 main .items {
