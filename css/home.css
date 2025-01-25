@@ -11,20 +11,9 @@
 }
 
 main {
-    grid-column: 1/1;
-    grid-row: 2/2;
-    padding: var(--padding);
     display: flex;
     flex-flow: row wrap;
     margin-top: auto;
-}
-
-main h2.title{
-    padding-left: var(--padding);
-    border-bottom: var(--border);
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 200;
 }
 
 main section.privilege-table{

@@ -7,6 +7,9 @@
     --button-color-hover: #000;
     --button-border: 2px solid #222;
     --button-border-hover: 2px solid #f8c;
+    --mobile-button-padding: 5px 10px;
+    --mobile-button-border: 1px solid #222;
+    --mobile-button-border-radius: 5px;
     --link-color: #c8f;
     --link-color-hover: #000;
     --link-back-color: #0000;
@@ -50,42 +53,103 @@ header{
     width: var(--webpage-width);
 }
 
-#title-bar{
-    background-color: var(--bar-color);
-    color: var(--text-color);
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr;
-    height: 120px;
+@media (max-width: 500px) {
+    /* mobile version of the title bar and the navbar*/
+    #title-bar{
+        background-color: var(--bar-color);
+        color: var(--text-color);
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr;
+        height: fit-content;
+        padding: var(--padding-and-gap);
+    }
+
+    #title-bar img{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        padding: var(--padding-and-gap);
+    }
+
+    #title-bar .title{
+        font-size: 1.5em;
+        font-weight: 300;
+        color: var(--title-color);
+        text-align: center;
+        grid-column: 2/2;
+        padding: var(--padding-and-gap);
+        margin: auto;
+    }
+
+    #title-bar .button{
+        grid-column: 3/3;
+        margin: auto auto;
+        font-size: 12px;
+        border: var(--mobile-button-border);
+        border-radius: var(--mobile-button-border-radius);
+        height: fit-content;
+    }
+
+    #navbar{
+        display: flex;
+        flex-flow: row wrap;
+        padding: var(--padding-and-gap);
+        justify-content: space-around;
+        gap: var(--padding-and-gap);
+        background-color: var(--navbar-background-color);
+    }
+
+    #navbar .button{
+        padding: var(--mobile-button-padding);
+        font-size: 16px;
+        border: var(--mobile-button-border);
+        border-radius: var(--mobile-button-border-radius);
+        text-align: left;
+    }
 }
 
-#title-bar img{
-    size: 100px;
-    padding: var(--padding-and-gap);
-}
+@media (min-width: 500px) {
+    /* desktop version of the title bar and the navbar */
+    #title-bar{
+        background-color: var(--bar-color);
+        color: var(--text-color);
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr;
+        height: 120px;
+    }
 
-#title-bar .title{
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--title-color);
-    text-align: center;
-    grid-column: 2/2;
-    padding: var(--padding-and-gap);
-    margin: auto;
-}
+    #title-bar img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        padding: var(--padding-and-gap);
+    }
 
-#title-bar .button{
-    grid-column: 3/3;
-    margin: auto auto;
-}
+    #title-bar .title{
+        font-size: 32px;
+        font-weight: 300;
+        color: var(--title-color);
+        text-align: center;
+        grid-column: 2/2;
+        padding: var(--padding-and-gap);
+        margin: auto;
+    }
+    
+    #title-bar .button{
+        grid-column: 3/3;
+        margin: auto auto;
+    }
 
-#navbar{
-    display: flex;
-    flex-flow: row wrap;
-    padding: var(--padding-and-gap);
-    justify-content: center;
-    gap: var(--padding-and-gap);
-    background-color: var(--navbar-background-color);
+    #navbar{
+        display: flex;
+        flex-flow: row wrap;
+        padding: var(--padding-and-gap);
+        justify-content: center;
+        gap: var(--padding-and-gap);
+        background-color: var(--navbar-background-color);
+    }
 }
 
 main {
@@ -96,6 +160,7 @@ main {
 
 main h2.title {
     width: var(--width);
+    padding-left: var(--padding-and-gap);
     border-bottom: var(--title-border);
     font-size: 32px;
     font-style: italic;
@@ -105,9 +170,7 @@ main h2.title {
 .button{
     background-color: var(--button-color);
     color: var(--text-color);
-    padding: var(--padding-and-gap);
-    padding-left: var(--padding-and-side-gap);
-    padding-right: var(--padding-and-side-gap);
+    padding: var(--padding-and-gap) var(--padding-and-side-gap);
     border: var(--button-border);
     border-radius: 40px;
     text-align: center;
