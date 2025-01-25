@@ -35,7 +35,7 @@ main .question-content{
     color: var(--content-text-color);
     border-radius: 10px;
     margin: 0px;
-    padding: 100px;
+    padding: 5vw;
 }
 
 section.forums{
@@ -61,6 +61,27 @@ form .content{
     gap: var(--padding-and-gap);
 }
 
+.content textarea{
+    resize: none;
+    height: 150px;
+}
+
+.content button{
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: var(--button-border);
+    padding: var(--padding-and-gap);
+    font-family: 'Space Grotesk', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.content button:hover{
+    background-color: var(--button-color-hover);
+    color: var(--button-text-color-hover);
+    border: var(--button-border-hover);
+}
+
 #Name,#Address,#Message{
     background-color: var(--text-box-back-color);
     color: var(--text-box-text-color);
@@ -69,16 +90,3 @@ form .content{
     border-radius: 5px;
 }
 
-#Submit{
-    background-color: var(--button-color);
-    color: var(--button-text-color);
-    border: var(--button-border);
-    border-radius: 20px;
-}
-
-#Submit:hover{
-    background-color: var(--button-color-hover);
-    color: var(--button-text-color-hover);
-    border: var(--button-border-hover);
-    border-radius: 20px;
-}
