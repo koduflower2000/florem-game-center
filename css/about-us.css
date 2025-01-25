@@ -15,18 +15,34 @@ main {
 	padding: var(--padding-and-gap);
 }
 
-main section.privilege-table{
-    display: flex;
-    flex-flow: column wrap;
+@media (max-width: 500px) {
+    main .privilege-table,.contact-info-table{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media (min-width: 499px) {
+    main .privilege-table,.contact-info-table{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin: 0 auto;
+}
 }
 
-section.privilege-table table tr td{
+section table tr td{
     border: var(--table-border);
-    margin: 0 auto;
+    padding: var(--padding-and-gap);
     text-align: center;
+    width: fit-content;
 }
 
-section.privilege-table table tr:nth-child(1) td{
+section table tr:nth-child(1) td{
     background-color: var(--table-header-back-color);
     color: var(--table-header-color);
 }
@@ -63,7 +79,7 @@ main .list-element{
     border-bottom: var(--border);
 }
 
-main .list-element img{
+main .list-element iframe{
     grid-column: 1/1;
     grid-row: 1/span 5;
     background-color: var(--background-color);
