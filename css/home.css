@@ -1,6 +1,5 @@
 :root{
     --padding: 10px;
-    --square-grid-size: repeat(2,1fr);
     --width: 100%;
     --border: 2px #c8f solid;
     --container-color: #111;
@@ -12,42 +11,29 @@
 
 main {
     display: flex;
-    flex-flow: row wrap;
-    margin-top: auto;
-}
-
-main section.privilege-table{
-    display: flex;
     flex-flow: column wrap;
 }
 
-section.privilege-table table{
-    margin: 0 auto;
-}
-
 .landing-section{
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #408;
-    background-image: url(../img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.jpg);
-    background-position: 50% 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
 }
 
-.landing-section div.blur-effect{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.landing-section img{
+    grid-column: 1/1;
     border-radius: var(--padding);
-    background-color: #0004;
-    backdrop-filter: blur(var(--padding));
+    filter: blur(var(--padding));
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.landing-section div.blur-effect:hover{
-    backdrop-filter: none;
+.landing-section img:hover{
+    filter: none;
 }
 
 .landing-section .main-text{
+    grid-column: 2/2;
     font-size: 24px;
     font-style: italic;
     text-align: left;
@@ -64,7 +50,7 @@ section.privilege-table table{
 .services .service-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-template-rows: min-content;
+    grid-template-rows: fit-content;
     gap: var(--container-gap);
     list-style-type: none;
     padding: 0;
@@ -89,46 +75,61 @@ section.privilege-table table{
     gap: var(--container-gap);
 }
 
-.game{
+.content{
     padding: var(--padding);
+    gap: var(--container-gap);
     width: fit-content;
+    height: auto;
     display: grid;
-    grid-template-columns: var(--square-grid-size);
-    grid-template-rows: 1fr 1fr 50px 3fr;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 110px auto 50px 100px;
     border: var(--container-border);
     border-radius: var(--container-gap);
     background-color: var(--container-color);
 }
 
-.game:hover{
+.content:hover{
     border: var(--container-border-hover);
     background-color: var(--container-color-hover);
 }
 
-.game .icon{
+.content .icon{
     grid-column: 1;
     grid-row: 1/span 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.game .title{
+.content .title{
     grid-column: 2;
     grid-row: 1;
     font-size: 24px;
 }
 
-.game .author{
+.content .author{
     grid-column: 2;
     grid-row: 2;
     font-size: 16px;
 }
 
-.game .button{
+.content .featured{
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
+    font-size: 14px;
 }
 
-.game .description{
+.content .button{
+    grid-column: 2;
+    grid-row: 3;
+    margin: auto;
+    padding: auto;
+}
+
+.content .description{
     grid-column: 1/span 2;
     grid-row: 4;
     margin-top: var(--padding);
+    font-size: 16px;
+    overflow: scroll;
 }

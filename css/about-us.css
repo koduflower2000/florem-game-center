@@ -1,5 +1,9 @@
 :root{
     --padding-and-gap: 10px;
+    /* table settings */
+    --table-border: 1px solid #222;
+    --table-header-color: #f8c;
+    --table-header-back-color: #111;
     /* content border */
     --border: 2px solid #f8c;
     --background-color: #111;
@@ -11,7 +15,23 @@ main {
 	padding: var(--padding-and-gap);
 }
 
-main .title{
+main section.privilege-table{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section.privilege-table table tr td{
+    border: var(--table-border);
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.privilege-table table tr:nth-child(1) td{
+    background-color: var(--table-header-back-color);
+    color: var(--table-header-color);
+}
+
+main h1.title{
     width: var(--width);
     border-bottom: var(--border);
     font-size: 32px;
