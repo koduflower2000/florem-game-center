@@ -48,6 +48,7 @@ main .list-element img{
     grid-row: 1/span 5;
     background-color: var(--background-color);
     border-radius: var(--padding-and-gap);
+    object-fit: cover;
 }
 
 main .list-element-title{

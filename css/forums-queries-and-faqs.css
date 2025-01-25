@@ -34,7 +34,7 @@ main .question-content{
     background-color: var(--content-back-color);
     color: var(--content-text-color);
     border-radius: 10px;
-    margin: 10px;
+    margin: 0px;
     padding: 100px;
 }
 
