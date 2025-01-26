@@ -221,7 +221,7 @@ footer div#terms{
 footer div#copyright {
     grid-column: 1/snap 2;
     text-align: center;
-    width: 100%;
+    width: var(--webpage-width);
 }
 
 div a {

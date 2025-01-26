@@ -51,7 +51,6 @@ main {
         object-fit: cover;
         border-radius: var(--container-gap);
     }
-
 }
 
 .landing-section .main-text{
@@ -91,8 +90,7 @@ main {
 .trending,.categories{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    /*grid-template-rows: repeat(auto-fit,minmax(300px,1fr));*/
-    overflow: scroll;
+    grid-template-rows: repeat(auto-fit);
     gap: var(--container-gap);
 }
 
