@@ -198,7 +198,8 @@ footer{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     bottom: 0%;
-    padding: 10px;
+    padding: var(--padding-and-gap);
+    gap: var(--padding-and-gap);
 }
 
 footer div{
@@ -206,6 +207,7 @@ footer div{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    gap: var(--padding-and-gap);
 }
 
 footer div#socials{
@@ -219,7 +221,7 @@ footer div#terms{
 footer div#copyright {
     grid-column: 1/snap 2;
     text-align: center;
-    padding: 0 auto;
+    width: 100%;
 }
 
 div a {
