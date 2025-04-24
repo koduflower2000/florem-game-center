@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <script defer src="./payment.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Payment - Florem Game Center</title>
+</head>
+<body>
+    <header>
+        <section id="title-bar"> <!-- the branding of the website -->
+            <picture class="logo">
+                <source media="(min-width: 100px)" srcset="../img/logo-128x128.png">
+                <source media="(min-width: 50px)" srcset="../img/logo-64x64.png">
+                <img src="../img/logo-32x32.png" alt="Logo of Florem Game Center">
+            </picture>
+            <h1 class="title">Florem Game Center</h1>
+        </section>
+    </header>
+    <main>
+        <h2 class="title">Total Items</h2>
+        <div id="checkout">
+            <table id="checkout-items">
+            </table>
+            <div>Total price: $<span id="total-price"></span></div>
+            <div>Number of Items: <span id="total-items"></span></div>
+        </div>
+        <form id="user-details">
+            <!--
+                flex
+                row wrap
+                padding: 10px
+                gap: 10px
+                width: 500px
+                height: fit-content (auto)
+            -->
+            <!-- name -->
+            <div id="user-name-field">
+                <label for="user-name">Full Name</label>
+                <input type="text" name="user-name" id="user-name" required>
+            </div>
+            <!-- mail -->
+            <div id="user-email-field">
+                <label for="user-email">E-mail Address</label>
+                <input type="text" name="user-email" id="user-email" required>
+            </div>
+            <!-- card number -->
+            <div id="user-card-number-field">
+                <label for="user-card-number">Card Number</label>
+                <input type="number" name="user-card-number" id="user-card-number" required>
+            </div>
+            <!-- card cvv number -->
+            <div id="user-card-cvv-number-field">
+                <label for="user-card-cvv-number">CVV Number</label>
+                <input type="number" name="user-card-cvv-number" id="user-card-cvv-number" required>
+            </div>
+            <button type="submit" id="btnPay">Pay and complete the transaction</button>
+        </form>
+    </main>
+    <footer>
+        <div id="main-text">
+            Trusted by the world's most popular game and game merchandise companies:
+        </div>
+        <div id="trusted-companies-and-sponsorships">
+            <picture>
+                <source media="(min-width: 100px)" srcset="../img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).png" type="image/png">
+                <img class="picture" src="../img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).jpg" alt="Bandai Namco Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="../img/trusted-company-logos/electronic-arts-1-logo-png-transparent.png" type="image/png">
+                <img class="picture" src="../img/trusted-company-logos/electronic-arts-1-logo-png-transparent.jpg" alt="Electronic Arts Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="../img/trusted-company-logos/microsoft-game-studios-vector-logo.png" type="image/png">
+                <img class="picture" src="../img/trusted-company-logos/microsoft-game-studios-vector-logo.jpg" alt="Microsoft Game Studios Vector Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="../img/trusted-company-logos/Nintendo.png" type="image/png">
+                <img class="picture" src="../img/trusted-company-logos/Nintendo.jpg" alt="Nintendo Logo">
+            </picture>
+        </div>
+        <div id="socials">
+            Follow us on: 
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div id="terms">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div id="copyright">&copy;2025 Florem Game Electronics. All rights reserved.</div>
+    </footer>
+</body>
+</html>

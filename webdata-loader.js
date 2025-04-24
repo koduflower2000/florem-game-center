@@ -1,9 +1,14 @@
-const cacheName = 'cache-loader';
+const cacheName = 'web-cache';
 const assetsToCache = [
   './',
   './index.html',
+  './games.html',
+  './upcoming-games.html',
+  './consoles-etc.html',
+  './forums-queries-and-faqs.html',
+  './about-us.html',
   './css/',
-  './img/',
+  './img/'
   // other assets
 ];
 

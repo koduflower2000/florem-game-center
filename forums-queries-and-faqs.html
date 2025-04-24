@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/forums-queries-and-faqs.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="manifest" href="./site.webmanifest">
     <title>Forms, Queries, and FAQs - Florem Game Center</title>
 </head>
 <body>
     <header>
         <section id="title-bar"> <!-- the branding of the website -->
-            <img src="./img/logo-256x256.png" alt="Logo of Florem Game Center">
+            <picture class="logo">
+                <source media="(min-width: 128px)" srcset="./img/logo-128x128.png">
+                <source media="(min-width: 64px)" srcset="./img/logo-64x64.png">
+                <source media="(min-width: 32px)" srcset="./img/logo-32x32.png">
+                <img src="./img/logo-32x32.png" alt="Logo of Florem Game Center">
+            </picture>
             <h1 class="title">Florem Game Center</h1>
             <a class="button" href="./login.html">Log In</a>
         </section>
@@ -29,41 +34,70 @@
         </nav>
     </header>
     <main>
-        <h2 class="title">Frequently asked Questions</h2>
-        <section class="question-content">
-            <h1 class="title">Do you ship game products here as well as overseas?</h1>
-            <div class="text">We ship games as well as game consoles and peripherals islandwide. We also ship overseas, but it comes with a shipping cost.</div>
-            <h1 class="title">How long does a single delivery take?</h1>
-            <div class="text">A single delivery can take from 2 to 5 days, depending on the speed of the delivery and the distance needed to travel to deliver the specified products.</div>
-            <h1 class="title">What payment methods are accepted?</h1>
-            <div class="text">Credit/debit cards, PayPal, gift cards, and sometimes cryptocurrency.</div>
-            <h1 class="title">Are there refunds for purchases?</h1>
-            <div class="text">Refund policies vary. Check the platform's terms and conditions.</div>
+        <section>
+            <h2 class="title">Frequently asked Questions</h2>
+            <div class="question-content">
+                <h1 class="title">Do you ship game products here as well as overseas?</h1>
+                <div class="text">We ship games as well as game consoles and peripherals islandwide. We also ship overseas, but it comes with a shipping cost.</div>
+                <h1 class="title">How long does a single delivery take?</h1>
+                <div class="text">A single delivery can take from 2 to 5 days, depending on the speed of the delivery and the distance needed to travel to deliver the specified products.</div>
+                <h1 class="title">What payment methods are accepted?</h1>
+                <div class="text">Credit/debit cards, PayPal, gift cards, and sometimes cryptocurrency.</div>
+                <h1 class="title">Are there refunds for purchases?</h1>
+                <div class="text">Refund policies vary. Check the platform's terms and conditions.</div>
+            </div>
         </section>
-        <h2 class="title">Forums and Queries</h2>
-        <section class="forums">
-            <form>
-                <section class="content">
-                    <label for="name">Name</label>
-                    <input type="text" id="Name" name="name" placeholder="Enter your name" size="20">
-                    <label for="address">Address</label>
-                    <input type="text" id="Address" name="address" placeholder="Enter your address" size="20">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="Message" placeholder="Enter your message"></textarea>
-                    <button type="submit" id="Submit">Submit</button>
-                </section>
-            </form>
+        <section>
+            <h2 class="title">Forums and Queries</h2>
+            <div class="forums">
+                <form class="content" id="forum-message-form">
+                    <div class="field">
+                        <label for="forum-user-name">Name</label>
+                        <input type="text" id="forum-user-name" name="name" placeholder="Enter your name" size="20">
+                    </div>
+                    <div class="field">
+                        <label for="forum-user-email-address">Email Address</label>
+                        <input type="text" id="forum-user-email-address" name="address" placeholder="Enter your email address" size="20">
+                    </div>
+                    <div class="field">
+                        <label for="forum-user-message">Message</label>
+                        <textarea name="message" id="forum-user-message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" id="forum-user-submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="socials">
+        <div id="main-text">
+            Trusted by the world's most popular game and game merchandise companies:
+        </div>
+        <div id="trusted-companies-and-sponsorships">
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).jpg" alt="Bandai Namco Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.jpg" alt="Electronic Arts Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/microsoft-game-studios-vector-logo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/microsoft-game-studios-vector-logo.jpg" alt="Microsoft Game Studios Vector Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Nintendo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Nintendo.jpg" alt="Nintendo Logo">
+            </picture>
+        </div>
+        <div id="socials">
             Follow us on: 
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
-        <div class="terms">
+        <div id="terms">
             <a href="#">Terms and Conditions</a>
             <a href="#">Privacy</a>
         </div>
