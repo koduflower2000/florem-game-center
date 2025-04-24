@@ -88,9 +88,11 @@ theForm.addEventListener("submit",function(e){
 
         let paymentInfo = document.createElement("div");
         let currentDateTime = new Date();
-        let currentDate = currentDateTime.toISOString().split("T")[0];
-        let currentTime = currentDateTime.toISOString().split("T")[1];
-        currentTime = currentTime.split(".")[0];
+        let deliveryDateTime = new Date(currentDateTime);
+        deliveryDateTime.setDate(currentDateTime.getDate() + 3);
+        let deliveryDay = deliveryDateTime.toISOString().split("T")[0];
+        let deliveryTime = deliveryDateTime.toISOString().split("T")[1];
+        deliveryTime = deliveryTime.split(".")[0];
         paymentInfo.style.gridColumn = "1";
         paymentInfo.style.gridRow = "3";
         paymentInfo.style.fontFamily = `${defaultFontFamily}`;
@@ -98,7 +100,7 @@ theForm.addEventListener("submit",function(e){
         paymentInfo.style.textAlign = "center";
         paymentInfo.style.display = "block";
         paymentInfo.style.padding = `${defaultPaddingAndGap}`;
-        paymentInfo.innerText = `Purchase Date: ${currentDate} at ${currentTime} GMT`;
+        paymentInfo.innerText = `Delivery Date: ${deliveryDay} at ${deliveryTime} GMT`;
         noticePopUp.appendChild(paymentInfo);
 
         let noticePrice = document.createElement("div");
