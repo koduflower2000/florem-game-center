@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -14,16 +13,23 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="Florem Game Center">
     <link rel="manifest" href="./site.webmanifest">
-    <title>Home - Florem Game Center</title>
+    <script defer src="./main.js"></script>
+    <title>Florem Game Center - The Original</title>
 </head>
 <body>
+    <script src="./main.js" defer></script>
     <header>
-        <section id="title-bar"> <!-- the branding of the website -->
-            <img src="./img/logo-256x256.png" alt="Logo of Florem Game Center">
+        <section> <!-- the branding of the website -->
+            <picture class="logo">
+                <source media="(min-width: 128px)" srcset="./img/logo-128x128.png">
+                <source media="(min-width: 64px)" srcset="./img/logo-64x64.png">
+                <source media="(min-width: 32px)" srcset="./img/logo-32x32.png">
+                <img src="./img/logo-32x32.png" alt="Logo of Florem Game Center">
+            </picture>
             <h1 class="title">Florem Game Center</h1>
             <a class="button" href="./login.html">Log In</a>
         </section>
-        <nav id="navbar">
+        <nav>
             <a class="button" href="#">Home</a>
             <a class="button" href="./games.html">Today's Specials</a>
             <a class="button" href="./upcoming-games.html">Coming Soon</a>
@@ -33,13 +39,15 @@
         </nav>
     </header>
     <main>
-        <div class="landing-section">
-            <img src="./img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Game arcade consoles with lit-up screens in an actual game store at night">
-            <p class="main-text">
+        <section class="landing-section">
+            <picture class="landing-image">
+                <img class="landing-image" src="./img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Game arcade consoles with lit-up screens in an actual game store at night">
+            </picture>
+            <p>
                 Hello, there! Welcome to the Florem Game Center, your one stop for all your gaming needs! Play some games, get rewards, make friends, and be one of the best gamers ever to flourish on this wonderful electrified garden!<br/>
                 At Florem Game Center, we're committed to giving you the latest games and their recent updates, catered and served in one website for easy access, so you can have more fun while playing games! We've been serving games for fun since 2022, and we're eager to say we're still staying strong. We hope you have fun playing games! Happy gaming!
             </p>
-        </div>
+        </section>
         <section class="services">
             <h2 class="title">Our services</h2>
             <ul class="service-list">
@@ -87,86 +95,117 @@
                 </li>
             </ul>
         </section>
-        <h2 class="title">Trending</h2> <!-- italic, 32px, -->
-        <section class="trending">
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/games/call-of-duty-black-ops-6-keyart-01-en-21may24.webp">
-                    <img class="icon" src="./img/games/call-of-duty-black-ops-6-keyart-01-en-21may24.png" alt="Image of Call of Duty: Black Ops 6">
-                </picture>
-                <div class="title">Call of Duty: Black Ops 6</div>
-                <div class="author">Microsoft (Corp)</div>
-                <a class="button" href="#">Get Now</a>
-                <div class="description">Developed by Treyarch and Raven, Black Ops 6 is a spy action thriller set in the early 90s, a period of transition and upheaval in global politics, characterized by the end of the Cold War and the rise of the United States as a single superpower. With a mind-bending narrative, and unbound by the rules of engagement, this is signature Black Ops.</div>
-            </div>
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/games/dragon-ball-sparking-zero-icon.png">
-                    <img class="icon" src="./img/games/dragon-ball-sparking-zero-icon.png" alt="Image of Dragon Ball: Sparking! Zero - Standard Edition">
-                </picture>
-                <div class="title">Dragon Ball: Sparking! Zero - Standard Edition</div>
-                <div class="author">Bandai Namco Entertainment</div>
-                <a class="button" href="#">Get Now</a>
-                <div class="description">Engage in heart-pounding, high-speed 3D battles that stay true to the anime and video game series, with breathtaking visuals and authentic combat moves like beam clashes, rush attacks, movements too quick for the eyes to see, and planet-razing ultimate attacks.</div>
-            </div>
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/games/nintendo-super-mario-party-jamboree.png">
-                    <img class="icon" src="./img/games/nintendo-super-mario-party-jamboree.jpg" alt="Image of Super Mario Party Jamboree">
-                </picture>
-                <div class="title">Super Mario Party Jamboree</div>
-                <div class="author">Nintendo</div>
-                <a class="button" href="#">Get Now</a>
-                <div class="description">Join a jam-packed celebration in Super Mario Party Jamboree for Nintendo Switch! Grab family and friends and get moving and grooving on seven new and returning boards. Battle it out in more minigames than ever before, and slice, dice, and assemble in new motion-based game modes!</div>
+        <section>
+            <h2 class="title">Trending</h2> <!-- section title "Trending", italic, 32px, -->
+            <div class="content-placeholder">
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/games/call-of-duty-black-ops-6-keyart-01-en-21may24-thumbnail.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/games/call-of-duty-black-ops-6-keyart-01-en-21may24-thumbnail.png" type="image/png">
+                        <img class="content-banner" src="./img/games/call-of-duty-black-ops-6-keyart-01-en-21may24-thumbnail.jpg" alt="Image of Dragon Ball: Sparking! Zero - Standard Edition">
+                    </picture>
+                    <div class="content-title">Call of Duty: Black Ops 6</div>
+                    <div class="content-author">Microsoft Corporation</div>
+                    <div class="content-description">Developed by Treyarch and Raven, Black Ops 6 is a spy action thriller set in the early 90s, a period of transition and upheaval in global politics, characterized by the end of the Cold War and the rise of the United States as a single superpower. With a mind-bending narrative, and unbound by the rules of engagement, this is signature Black Ops.</div>
+                    <a class="content-button" href="#">Get Now</a>
+                </div>
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/games/dragon-ball-sparking-zero-open-graph-thumbnail.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/games/dragon-ball-sparking-zero-open-graph-thumbnail.png" type="image/png">
+                        <img class="content-banner" src="./img/games/dragon-ball-sparking-zero-open-graph-thumbnail.jpg" alt="Image of Dragon Ball: Sparking! Zero - Standard Edition">
+                    </picture>
+                    <div class="content-title">Dragon Ball: Sparking! Zero - Standard Edition</div>
+                    <div class="content-author">Bandai Namco Entertainment</div>
+                    <a class="content-button" href="#">Get Now</a>
+                    <div class="content-description">Engage in heart-pounding, high-speed 3D battles that stay true to the anime and video game series, with breathtaking visuals and authentic combat moves like beam clashes, rush attacks, movements too quick for the eyes to see, and planet-razing ultimate attacks.</div>
+                </div>
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/games/nintendo-super-mario-party-jamboree-thumbnail-wide.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/games/nintendo-super-mario-party-jamboree-thumbnail-wide.png" type="image/png">
+                        <img class="content-banner" src="./img/games/nintendo-super-mario-party-jamboree-thumbnail-wide.jpg" alt="Image of Super Mario Party Jamboree">
+                    </picture>
+                    <div class="content-title">Super Mario Party Jamboree</div>
+                    <div class="content-author">Nintendo</div>
+                    <a class="content-button" href="#">Get Now</a>
+                    <div class="content-description">Join a jam-packed celebration in Super Mario Party Jamboree for Nintendo Switch! Grab family and friends and get moving and grooving on seven new and returning boards. Battle it out in more minigames than ever before, and slice, dice, and assemble in new motion-based game modes!</div>
+                </div>
             </div>
         </section>
-        <h2 class="title">Top Categories</h2>
-        <section class="categories">
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/trending-categories/action.png">
-                    <img class="icon" src="./img/trending-categories/action.jpeg" alt="Image of Action/Adventure">
-                </picture>
-                <div class="title">Action/Adventure</div>
-                <div class="featured">Featuring The Legend of Zelda: Tears of the Kingdom, Elden Ring, Uncharted 4: A Thief's End, and others</div>
-                <a class="button" href="#">Explore</a>
-                <div class="description">Action/Adventure games are the perfect blend of thrilling combat, exploration, and immersive storytelling. Players often embark on epic journeys through vast open worlds or linear, story-driven environments filled with quests, puzzles, and challenges. These games focus on dynamic gameplay, allowing players to master combat mechanics, solve intricate puzzles, and uncover hidden treasures. Popular examples include The Legend of Zelda series, Elden Ring, and Uncharted.</div>
-            </div>
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/trending-categories/multiplayer-and-battle-royale.png">
-                    <img class="icon" src="./img/trending-categories/multiplayer-and-battle-royale.jpg" alt="Multiplayer & Battle Royale">
-                </picture>
-                <div class="title">Multiplayer & Battle Royale</div>
-                <div class="featured">Featuring Fortnite, Call of Duty: Warzone, Apex Legends, and others</div>
-                <a class="button" href="#">Explore</a>
-                <div class="description">Multiplayer games bring people together for cooperative or competitive gameplay experiences. Whether teaming up to complete objectives or going head-to-head in epic battles, these games thrive on social interaction. Battle Royale games, a subset of multiplayer, pit dozens or even hundreds of players against one another in survival-style matches until only one player or team remains. Titles like Call of Duty: Warzone, Fortnite, and Apex Legends dominate this category.</div>
-            </div>
-            <div class="content">
-                <picture class="icon">
-                    <source class="icon" srcset="./img/trending-categories/rpg.png">
-                    <img class="icon" src="./img/trending-categories/rpg.jpg" alt="Image of RPGs (Role-Playing Games)">
-                </picture>
-                <div class="title">RPGs (Role-Playing Games)</div>
-                <div class="featured">Featuring The Witcher 3: Wild Hunt, Final Fantasy XVI, Starfield, and others</div>
-                <a class="button" href="#">Explore</a>
-                <div class="description">RPGs offer rich worlds where players can immerse themselves in character-driven stories and make impactful choices. With customizable characters, strategic combat, and detailed lore, RPGs cater to those who enjoy long, meaningful adventures. This category includes JRPGs like Final Fantasy and Persona, which often feature anime-inspired visuals and turn-based mechanics, as well as Western RPGs like The Witcher 3 and Starfield, known for their open-world exploration and freedom of choice.</div>
+        <section>
+            <h2 class="title">Top Categories</h2> <!-- section title "Top Categories", italic, 32px -->
+            <div class="content-placeholder">
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/action-thumbnail.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/action-thumbnail.png" type="image/png">
+                        <img class="content-banner" src="./img/trending-categories/action-thumbnail.jpg" alt="Image of Action/Adventure">
+                    </picture>
+                    <div class="content-title">Action/Adventure</div>
+                    <div class="content-featured">Featuring The Legend of Zelda: Tears of the Kingdom, Elden Ring, Uncharted 4: A Thief's End, and others</div>
+                    <a class="content-button" href="#">Explore</a>
+                    <div class="content-description">Action/Adventure games are the perfect blend of thrilling combat, exploration, and immersive storytelling. Players often embark on epic journeys through vast open worlds or linear, story-driven environments filled with quests, puzzles, and challenges. These games focus on dynamic gameplay, allowing players to master combat mechanics, solve intricate puzzles, and uncover hidden treasures. Popular examples include The Legend of Zelda series, Elden Ring, and Uncharted.</div>
+                </div>
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/multiplayer-and-battle-royale-thumbnail.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/multiplayer-and-battle-royale-thumbnail.png" type="image/png">
+                        <img class="content-banner" src="./img/trending-categories/multiplayer-and-battle-royale-thumbnail.jpg" alt="Image of Multiplayer & Battle Royale">
+                    </picture>
+                    <div class="content-title">Multiplayer & Battle Royale</div>
+                    <div class="content-featured">Featuring Fortnite, Call of Duty: Warzone, Apex Legends, and others</div>
+                    <a class="content-button" href="#">Explore</a>
+                    <div class="content-description">Multiplayer games bring people together for cooperative or competitive gameplay experiences. Whether teaming up to complete objectives or going head-to-head in epic battles, these games thrive on social interaction. Battle Royale games, a subset of multiplayer, pit dozens or even hundreds of players against one another in survival-style matches until only one player or team remains. Titles like Call of Duty: Warzone, Fortnite, and Apex Legends dominate this category.</div>
+                </div>
+                <div class="content">
+                    <picture class="content-banner">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/rpg-thumbnail.webp" type="image/webp">
+                        <source media="(min-width: 300px)" srcset="./img/trending-categories/rpg-thumbnail.png" type="image/png">
+                        <img class="content-banner" src="./img/trending-categories/rpg-thumbnail.jpg" alt="Image of RPGs (Role-Playing Games)">
+                    </picture>
+                    <div class="content-title">RPGs (Role-Playing Games)</div>
+                    <div class="content-featured">Featuring The Witcher 3: Wild Hunt, Final Fantasy XVI, Starfield, and others</div>
+                    <a class="content-button" href="#">Explore</a>
+                    <div class="content-description">RPGs offer rich worlds where players can immerse themselves in character-driven stories and make impactful choices. With customizable characters, strategic combat, and detailed lore, RPGs cater to those who enjoy long, meaningful adventures. This category includes JRPGs like Final Fantasy and Persona, which often feature anime-inspired visuals and turn-based mechanics, as well as Western RPGs like The Witcher 3 and Starfield, known for their open-world exploration and freedom of choice.</div>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="socials">
+        <div id="main-text">
+            Trusted by the world's most popular game and game merchandise companies:
+        </div>
+        <div id="trusted-companies-and-sponsorships">
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).jpg" alt="Bandai Namco Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.jpg" alt="Electronic Arts Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/microsoft-game-studios-vector-logo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/microsoft-game-studios-vector-logo.jpg" alt="Microsoft Game Studios Vector Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Nintendo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Nintendo.jpg" alt="Nintendo Logo">
+            </picture>
+        </div>
+        <div id="socials">
             Follow us on: 
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
-        <div class="terms">
+        <div id="terms">
             <a href="#">Terms and Conditions</a>
             <a href="#">Privacy</a>
         </div>
-        <div id="copyright">&copy;2024 Florem Game Store. All rights reserved.</div>
+        <div id="copyright">&copy;2025 Florem Game Electronics. All rights reserved.</div>
         <!--
             Trending:
             From the games page.

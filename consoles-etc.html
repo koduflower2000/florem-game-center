@@ -8,14 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/consoles-etc.css">
-    <title>Consoles and More</title>
+    <script defer src="./payments/cart.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="manifest" href="./site.webmanifest">
+    <title>Consoles and More - Florem Game Center</title>
 </head>
 <body>
     <header>
         <section id="title-bar"> <!-- the branding of the website -->
-            <img src="./img/logo-256x256.png" alt="Logo of Florem Game Center">
+            <picture class="logo">
+                <source media="(min-width: 128px)" srcset="./img/logo-128x128.png">
+                <source media="(min-width: 64px)" srcset="./img/logo-64x64.png">
+                <source media="(min-width: 32px)" srcset="./img/logo-32x32.png">
+                <img src="./img/logo-32x32.png" alt="Logo of Florem Game Center">
+            </picture>
             <h1 class="title">Florem Game Center</h1>
             <a class="button" href="./login.html">Log In</a>
         </section>
@@ -30,114 +36,1443 @@
     </header>
     <main>
         <div class="search-filter">
-            <input name="Search" id="Search">
-            <a href="./consoles-etc.html" class="button">Consoles</a>
-            <a href="./peripherals.html" class="button">Peripherals</a>
+            <a href="#consoles" class="button">Consoles</a>
+            <a href="#peripherals" class="button">Peripherals</a>
+            <a href="#processors" class="button">Processors</a>
+            <a href="#graphics-cards" class="button">Graphics Cards</a>
+            <a href="#motherboards" class="button">Motherboards</a>
+            <a href="#ram-cards" class="button">RAM Card Sticks</a>
+            <a href="#storage-devices" class="button">Storage Devices</a>
         </div>
         <h2 class="title">Consoles</h2>
-        <div class="items">
-            <div class="item">
-                <img src="./img/consoles/1.webp" alt="PlayStation 5" title="Price: $200.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                        <div class="item-title">PlayStation 5</div>
-                        <div class="item-rating">Rating: 4.5 stars</div>
-                    </div>
-                    <div class="item-description">With its powerful hardware, revolutionary controller, and a good library of console-exclusive titles, the PS5 takes the top spot as the very best gaming console that money can buy right now.</div>
+        <div class="content-placeholder" id="consoles">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/1.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/1.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/1.jpg" alt="Image of PlayStation 5" title="Price: $200.00">
+                </picture>
+                <div class="content-title">PlayStation 5</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 4.5 stars</div>
+                    <div class="content-price">Price: $200.00</div>
                 </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+                <div class="content-description">
+                    With its powerful hardware, revolutionary controller, and a good library of console-exclusive titles, the PS5 takes the top spot as the very best gaming console that money can buy right now.
                 </div>
-            </div>
-            <div class="item">
-                <img src="./img/consoles/2.webp" alt="Xbox Series S" title="Price: $175.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                        <div class="item-title">Xbox Series S</div>
-                        <div class="item-rating">Rating: 3.5 stars</div>
-                    </div>
-                    <div class="item-description">The Xbox Series S plays all the same games as the Xbox Series X for a fraction of the price. Its slim form factor also makes it a great pick for those with limited space.</div>
-                </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(0)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(0)" id="btnAddToCart">Add</button>
                 </div>
             </div>
-            <div class="item">
-                <img src="./img/consoles/3.webp" alt="Playstation 5 Pro" title="Price: $250.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                        <div class="item-title">Playstation 5 Pro</div>
-                        <div class="item-rating">Rating: 4 stars</div>
-                    </div>
-                    <div class="item-description">The PS5 Pro is easily the most powerful gaming console on the market, making it a must-have for gamers who want the very best performance.</div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/2.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/2.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/2.jpg" alt="Image of Xbox Series S" title="Price: $175.00">
+                </picture>
+                <div class="content-title">Xbox Series S</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 3.5 stars</div>
+                    <div class="content-price">Price: $175.00</div>
                 </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+                <div class="content-description">
+                    The Xbox Series S plays all the same games as the Xbox Series X for a fraction of the price. Its slim form factor also makes it a great pick for those with limited space.
                 </div>
-            </div>
-            <div class="item">
-                <img src="./img/consoles/4.webp" alt="Xbox Series X" title="Price: $150.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                        <div class="item-title">Xbox Series X</div>
-                        <div class="item-rating">Rating: 4 stars</div>
-                    </div>
-                    <div class="item-description">Although less powerful than the PS5 Pro, the Xbox Series X is the model to pick if you want great performance in the Xbox eco system.</div>
-                </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(1)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(1)" id="btnAddToCart">Add</button>
                 </div>
             </div>
-            <div class="item">
-                <img src="./img/consoles/5.webp" alt="item picture" title="Price: $100.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                        <div class="item-title">Nintendo Switch OLED</div>
-                        <div class="item-rating">Rating: 4 stars</div>
-                    </div>
-                    <div class="item-description">The Nintendo Switch OLED improves on its predecessor with a stellar display, better speakers, and a much more useful kickstand. A superb library of exclusive games also helps make this the best handheld gaming console right now.</div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/3.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/3.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/3.jpg" alt="Image of Playstation 5 Pro" title="Price: $250.00">
+                </picture>
+                <div class="content-title">Playstation 5 Pro</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 4 stars</div>
+                    <div class="content-price">Price: $250.00</div>
                 </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+                <div class="content-description">
+                    The PS5 Pro is easily the most powerful gaming console on the market, making it a must-have for gamers who want the very best performance.
+                </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(2)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(2)" id="btnAddToCart">Add</button>
                 </div>
             </div>
-            <div class="item">
-                <img src="./img/consoles/6.webp" alt="item picture" title="Price: $75.00">
-                <div class="item-details">
-                    <div class="item-stats">
-                    <div class="item-title">Nintendo Switch Lite</div>
-                    <div class="item-rating">Rating: 4.5 stars</div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/4.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/4.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/4.jpg" alt="Image of Xbox Series X" title="Price: $150.00">
+                </picture>
+                <div class="content-title">Xbox Series X</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 4 stars</div>
+                    <div class="content-price">Price: $150.00</div>
+                </div>
+                <div class="content-description">
+                    Although less powerful than the PS5 Pro, the Xbox Series X is the model to pick if you want great performance in the Xbox eco system.
+                </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(3)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(3)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/5.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/5.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/5.jpg" alt="Image of Nintendo Switch OLED" title="Price: $75.00">
+                </picture>
+                <div class="content-title">Nintendo Switch OLED</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 4 stars</div>
+                    <div class="content-price">Price: $75.00</div>
+                </div>
+                <div class="content-description">
+                    The Nintendo Switch OLED improves on its predecessor with a stellar display, better speakers, and a much more useful kickstand. A superb library of exclusive games also helps make this the best handheld gaming console right now.
+                </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(4)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(4)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/6.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/consoles/6.png" type="image/png">
+                    <img class="content-banner" src="./img/consoles/6.jpg" alt="Image of Nintendo Switch Lite" title="Price: $50.00">
+                </picture>
+                <div class="content-title">Nintendo Switch Lite</div>
+                <div class="content-stats">
+                    <div class="content-rating">Rating: 4.5 stars</div>
+                    <div class="content-price">Price: $50.00</div>
+                </div>
+                <div class="content-description">
+                    A more compact version of the Nintendo Switch, the Nintendo Switch Lite's tiny design is perfect for smaller hands. The durable build quality and lower price are also ideal for accident-prone kids.
+                </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(5)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(5)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Peripherals</h2>
+        <div class="content-placeholder" id="peripherals">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/1.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/1.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/1.jpg" alt="Image of Seagate BarraCuda 1TB Desktop Internal Hard Drive (3 Years Warranty)" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Seagate BarraCuda 1TB Desktop Internal Hard Drive (3 Years Warranty)</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5 stars</div>
+                        <div class="content-price">Price: $200.00</div>
                     </div>
-                    <div class="item-description">A more compact version of the Nintendo Switch, the Nintendo Switch Lite's tiny design is perfect for smaller hands. The durable build quality and lower price are also ideal for accident-prone kids.</div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Brand</td><td>Seagate</td></tr>
+                            <tr><td>Series</td><td>BarraCuda</td></tr>
+                            <tr><td>Model</td><td>ST1000DM010</td></tr>
+                            <tr><td>Packaging</td><td>Bare Drive</td></tr>
+                            <tr><td>Interface</td><td>SATA 6.0Gb/s</td></tr>
+                            <tr><td>Capacity</td><td>1TB</td></tr>
+                            <tr><td>RPM</td><td>7200 RPM</td></tr>
+                            <tr><td>Cache</td><td>64MB</td></tr>
+                            <tr><td>Average Latency</td><td>6Gb/s</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(6)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(6)" id="btnAddToCart">Add</button>
                 </div>
-                <div class="item-buttons">
-                    <a href="#" id="buy-now">Buy Now</a>
-                    <a href="#" id="add">Add</a>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/2.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/2.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/2.jpg" alt="Image of PNY XLR8 8GB DDR4 3200MHZ RGB Gaming EPIC-X Desktop RAM" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">PNY XLR8 8GB DDR4 3200MHZ RGB Gaming EPIC-X Desktop RAM</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4 stars</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>PC Type/Memory Type:</td><td>Desktop DDR4</td></tr>
+                            <tr><td>Capacity:</td><td>8GB</td></tr>
+                            <tr><td>Channel Type:</td><td>Single Channel Module</td></tr>
+                            <tr><td>Frequency Speed (JEDEC):</td><td>3200MHz (PC4-25600)</td></tr>
+                            <tr><td>CAS Latency:</td><td>CL16</td></tr>
+                            <tr><td>Voltage:</td><td>1.35V</td></tr>
+                            <tr><td>XMP Support*:</td><td>Yes</td></tr>
+                            <tr><td>Speed Compatibility:</td><td>3200MHz, 3000MHz, 2933MHz, 2800MHz, 2666MHz, 2400MHz, 2133MHz</td></tr>
+                            <tr><td>OS Compatibility:</td><td>Windows 10 and older</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(7)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(7)" id="btnAddToCart">Add</button>
                 </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/3.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/3.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/3.jpg" alt="Image of Gamdias Aura GP750 - 750 WATT Efficient Power Supply (2 YEARS WARRANTY)" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Gamdias Aura GP750 - 750 WATT Efficient Power Supply (2 YEARS WARRANTY)</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 3.6</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Model:</td><td>AURA GP750</td></tr>
+                            <tr><td>Type</td><td>ATX12V v2.4</td></tr>
+                            <tr><td>Efficiency</td><td>Close to 80 PLUS White efficiency</td></tr>
+                            <tr><td>Dimensions (LxWxH)</td><td>140 x 150 x 86 mm</td></tr>
+                            <tr><td>AC Input</td><td>180-240V / 7A / 47-63Hz</td></tr>
+                            <tr><td>DC Output</td><td>+3.3V / +5V / +12V / -12V / +5Vsb</td></tr>
+                            <tr><td>Max. Output Current</td><td>15A / 15A / 45A / 0.5A / 2.5A</td></tr>
+                            <tr><td>Max. Output Power</td><td>100W / 540W / 6W / 12.5W</td></tr>
+                            <tr><td>Power Rating</td><td>600W</td></tr>
+                            <tr><td>Total Output (Max.)</td><td>750W</td></tr>
+                            <tr><td>Protection</td><td>OVP / UVP / OPP / OCP / SCP</td></tr>
+                            <tr><td>Main Power</td><td>1 (24 Pin)</td></tr>
+                            <tr><td>CPU</td><td>2 (4+4 Pin)</td></tr>
+                            <tr><td>PCI-E</td><td>2 (6+2 Pin)</td></tr>
+                            <tr><td>SATA</td><td>4 (4 Pin)</td></tr>
+                            <tr><td>Molex</td><td>2 (4 Pin)</td></tr>
+                            <tr><td>Modular</td><td>Non Modular</td></tr>
+                            <tr><td>Flat Cable</td><td>Yes</td></tr>
+                            <tr><td>Cooling System</td><td>120mm hydraulic bearing fan</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(8)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(8)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/4.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/4.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/4.jpg" alt="Image of Koorui GN02 27″ 1080P FHD VA 240HZ SRGB 100%" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Koorui GN02 27″ 1080P FHD VA 240HZ SRGB 100%</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5 stars</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Screen Type</td><td>planform FLAT</td></tr>
+                            <tr><td>Screen visible size</td><td>27 inch</td></tr>
+                            <tr><td>Brightness</td><td>300 cd/㎡</td></tr>
+                            <tr><td>Aspect Ratio</td><td>16:9</td></tr>
+                            <tr><td>Backlight</td><td>LED</td></tr>
+                            <tr><td>Response Time</td><td>1MS MPRT OD (10,8,6) MS</td></tr>
+                            <tr><td>Panel Type</td><td>VA</td></tr>
+                            <tr><td>Viewing Angle</td><td>178°</td></tr>
+                            <tr><td>Resolution</td><td>FHD 1920*1080</td></tr>
+                            <tr><td>Refresh Rate</td><td>240 Hz</td></tr>
+                            <tr><td colspan="2">Size</td></tr>
+                            <tr><td>Width (mm)</td><td>613.49</td></tr>
+                            <tr><td>Height (mm)</td><td>472.23</td></tr>
+                            <tr><td>Depth (thickness (mm))</td><td>214.96</td></tr>
+                            <tr><td>Weight without Package</td><td>4.15Kg, 9.15 lbs</td></tr>
+                            <tr><td>Weight with Package</td><td>5.81Kg, 12.81lbs</td></tr>
+                            <tr><td>Weight Head Only</td><td>3.60Kg, 7.94 lbs</td></tr>
+                            <tr><td colspan="2">Colorfulness</td></tr>
+                            <tr><td>Color Coverage</td><td>100% SRGB, 90% DCI-P3</td></tr>
+                            <tr><td>Color Depth</td><td>8-bit</td></tr>
+                            <tr><td>Color Support</td><td>16.7M</td></tr>
+                            <tr><td>Contrast Ratio</td><td>3000:1</td></tr>
+                            <tr><td colspan="2">Other</td></tr>
+                            <tr><td>Stand - Adjustable up and down</td><td>-5~20°</td></tr>
+                            <tr><td>Integrated Speaker</td><td>NO</td></tr>
+                            <tr><td>VESA</td><td>75*75mm</td></tr>
+                            <tr><td>VESA Screw</td><td>M4*8mm</td></tr>
+                            <tr><td>Power Requirement</td><td>19V2.58A</td></tr>
+                            <tr><td>Included Accessory</td><td>HDMI 2.0</td></tr>
+                            <tr><td>Gaming Mod</td><td>MPRT 1MS; OD Accelerated (8,6,4); Free-sync; G-sync</td></tr>
+                            <tr><td>Software/Driver</td><td>NO</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(9)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(9)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/5.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/5.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/5.jpg" alt="Image of Logitech G923 TrueForce Sim Racing Wheel" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Logitech G923 TrueForce Sim Racing Wheel</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>TRUEFORCE force feedback</td></tr>
+                            <tr><td>Programmable dual clutch</td></tr>
+                            <tr><td>Control your game</td></tr>
+                            <tr><td>Premium racing design</td></tr>
+                            <tr><td>On-wheel game controls</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(10)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(10)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/6.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/peripherals/6.png" type="image/png">
+                    <img class="content-banner" src="./img/peripherals/6.jpg" alt="Image of Asus ROG Strix GeForce RTX 4070 Super 12GB GDDR6X OC Graphics Card (3 YEARS WARRANTY)" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Asus ROG Strix GeForce RTX 4070 Super 12GB GDDR6X OC Graphics Card (3 YEARS WARRANTY)</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4 stars</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Graphic Engine</td><td>NVIDIA® GeForce RTX™ 4070 SUPER</td></tr>
+                            <tr><td>Bus Standard</td><td>PCI Express 4.0</td></tr>
+                            <tr><td>OpenGL</td><td>OpenGL®4.6</td></tr>
+                            <tr><td>Video Memory</td><td>12GB GDDR6X</td></tr>
+                            <tr><td colspan="2">Engine Clock</td></tr>
+                            <tr><td>OC mode</td><td>2670 MHz (Boost Clock)</td></tr>
+                            <tr><td>Default mode</td><td>2640 MHz (Boost Clock)</td></tr>
+                            <tr><td>CUDA Core</td><td>7168</td></tr>
+                            <tr><td>Memory Speed</td><td>21 Gbps</td></tr>
+                            <tr><td>Memory Interface</td><td>192-bit</td></tr>
+                            <tr><td>Resolution</td><td>Digital Max Resolution 7680 x 4320</td></tr>
+                            <tr><td colspan="2">Interface</td></tr>
+                            <tr><td>Yes x 2 (Native HDMI 2.1a)</td></tr>
+                            <tr><td>Yes x 3 (Native DisplayPort 1.4a)</td></tr>
+                            <tr><td>HDCP Support Yes (2.3)</td></tr>
+                            <tr><td>Maximum Display Support: 4</td></tr>
+                            <tr><td>NVlink/ Crossfire Support: No</td></tr>
+                            <tr><td>Accessories</td><td>1 x Collection Card 1 x Speedsetup Manual 1 x Thank you Card 1 x ROG Velcro Hook & Loop 1 x ROG Graphics card holder 1 x Adapter cable (1 to 2)</td></tr>
+                            <tr><td>Software</td><td>ASUS GPU Tweak III & GeForce Game Ready Driver & Studio Driver: please download all software from the support site.</td></tr>
+                            <tr><td>Dimensions</td><td>338.9 x 149.4 x 62.4 mm 13.34 x 5.88 x 2.46 inch</td></tr>
+                            <tr><td>Recommended PSU</td><td>750W</td></tr>
+                            <tr><td>Power Connectors</td><td>1 x 16-pin</td></tr>
+                            <tr><td>Slot</td><td>3.12 slot</td></tr>
+                            <tr><td>AURA SYNC</td><td>ARGB</td></tr>
+                            <tr><td>Note</td><td>* Our wattage recommendation is based on a fully overclocked GPU and CPU system configuration. For a more tailored suggestion, please use the “Choose By Wattage” feature on our PSU product page: https://rog.asus.com/event/PSU/ASUS-Power-Supply-Units/index.html * All specifications are subject to change without notice. Please check with your supplier for exact offers. Products may not be available in all markets. If you do not use the latest and current specifications of ASUS products, you shall be liable for all loss and damage claimed by third party to ASUS based on false advertising or any other issues caused from using false specifications of ASUS products.</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(11)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(11)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Processors</h2>
+        <div class="content-placeholder" id="processors">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/1._2632442-ryzen-5-7600-teaser.avif" type="image/avif">
+                    <source media="(min-width: 150px)" srcset="./img/processors/1._2632442-ryzen-5-7600-teaser.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/1._2632442-ryzen-5-7600-teaser.jpg" alt="Image of AMD Ryzen 5 7600" title="Price: $150.00">
+                </picture>
+                    <div class="content-title">AMD Ryzen 5 7600</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.8</div>
+                        <div class="content-price">Price: $150.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Name</td><td>AMD Ryzen™ 5 7600</td></tr>
+                            <tr><td>Family</td><td>Ryzen</td></tr>
+                            <tr><td>Series</td><td>Ryzen 7000 Series</td></tr>
+                            <tr><td>Form Factor</td><td>Desktops , Boxed Processor</td></tr>
+                            <tr><td>Market Segment</td><td>Enthusiast Desktop</td></tr>
+                            <tr><td>AMD PRO Technologies</td><td>No</td></tr>
+                            <tr><td>Regional Availability</td><td>Global</td></tr>
+                            <tr><td>Former Codename</td><td>Raphael AM5</td></tr>
+                            <tr><td>Architecture</td><td>Zen 4</td></tr>
+                            <tr><td># of CPU Cores</td><td>6</td></tr>
+                            <tr><td>Multithreading (SMT)</td><td>Yes</td></tr>
+                            <tr><td># of Threads</td><td>12</td></tr>
+                            <tr><td>Max. Boost Clock</td><td>Up to 5.1 GHz</td></tr>
+                            <tr><td>Base Clock</td><td>3.8 GHz</td></tr>
+                            <tr><td>L1 Cache</td><td>384 KB</td></tr>
+                            <tr><td>L2 Cache</td><td>6 MB</td></tr>
+                            <tr><td>L3 Cache</td><td>32 MB</td></tr>
+                            <tr><td>Default TDP</td><td>65W</td></tr>
+                            <tr><td>Processor Technology for CPU Cores</td><td>TSMC 5nm FinFET</td></tr>
+                            <tr><td>Processor Technology for I/O Die</td><td>TSMC 6nm FinFET</td></tr>
+                            <tr><td>CPU Compute Die (CCD) Size</td><td>71mm²</td></tr>
+                            <tr><td>I/O Die (IOD) Size</td><td>122mm²</td></tr>
+                            <tr><td>Package Die Count</td><td>2</td></tr>
+                            <tr><td>Unlocked for Overclocking</td><td>Yes</td></tr>
+                            <tr><td>AMD EXPO™ Memory Overclocking Technology</td><td>Yes</td></tr>
+                            <tr><td>Precision Boost Overdrive</td><td>Yes</td></tr>
+                            <tr><td>Curve Optimizer Voltage Offsets</td><td>Yes</td></tr>
+                            <tr><td>AMD Ryzen™ Master Support</td><td>Yes</td></tr>
+                            <tr><td>CPU Socket</td><td>AM5</td></tr>
+                            <tr><td>Supporting Chipsets</td><td>A620 , X670E , X670 , B650E , B650 , X870E , X870 , B840 , B850</td></tr>
+                            <tr><td>CPU Boost Technology</td><td>Precision Boost 2</td></tr>
+                            <tr><td>Instruction Set</td><td>x86-64</td></tr>
+                            <tr><td>Supported Extensions</td><td>AES , AMD-V , AVX , AVX2 , AVX512 , FMA3 , MMX-plus , SHA , SSE , SSE2 , SSE3 , SSE4.1 , SSE4.2 , SSE4A , SSSE3 , x86-64</td></tr>
+                            <tr><td>Thermal Solution (PIB)</td><td>AMD Wraith Stealth</td></tr>
+                            <tr><td>Max. Operating Temperature (Tjmax)</td><td>95°C</td></tr>
+                            <tr><td>Launch Date</td><td>01/14/2023</td></tr>
+                            <tr><td>*OS Support</td><td>Windows 11 - 64-Bit Edition , Windows 10 - 64-Bit Edition , RHEL x86 64-Bit , Ubuntu x86 64-Bit</td></tr>
+                        </table>
+                        *Certain AMD technologies may require third-party enablement or activation. Supported features may vary by operating system. Please confirm with system manufacturer for specific features. No technology or product can be completely secure.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(12)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(12)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/2._km-1920x1080-i5_1080-1080.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/processors/2._km-1920x1080-i5_1080-1080.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/2._km-1920x1080-i5_1080-1080.jpg" alt="Image of Core i5-13400F" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Intel Core i5-13400F</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.6</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Total Cores</td><td>10</td></tr>
+                            <tr><td># of Performance-cores</td><td>6</td></tr>
+                            <tr><td># of Efficient-cores</td><td>4</td></tr>
+                            <tr><td>Total Threads</td><td>16</td></tr>
+                            <tr><td>Max Turbo Frequency</td><td>4.60 GHz</td></tr>
+                            <tr><td>Performance-core Max Turbo Frequency</td><td>4.60 GHz</td></tr>
+                            <tr><td>Efficient-core Max Turbo Frequency</td><td>3.30 GHz</td></tr>
+                            <tr><td>Performance-core Base Frequency</td><td>2.50 GHz</td></tr>
+                            <tr><td>Efficient-core Base Frequency</td><td>1.80 GHz</td></tr>
+                            <tr><td>Cache</td><td>20 MB Intel® Smart Cache</td></tr>
+                            <tr><td>Total L2 Cache</td><td>9.5 MB</td></tr>
+                            <tr><td>Processor Base Power</td><td>65 W</td></tr>
+                            <tr><td>Maximum Turbo Power</td><td>148 W</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(13)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(13)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/3._AMD_Ryzen_7_5700X.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/processors/3._AMD_Ryzen_7_5700X.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/3._AMD_Ryzen_7_5700X.jpg" alt="Image of AMD Ryzen 7 5700X" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">AMD Ryzen 7 5700X</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        3 Years Warranty
+                        <table>
+                            <tr><td>Product Line</td><td>AMD Ryzen™ 7 Desktop Processors</td></tr>
+                            <tr><td>Consumer Use</td><td>Yes</td></tr>
+                            <tr><td>Regional Availability</td><td>Global, China, NA, EMEA, APJ, LATAM</td></tr>
+                            <tr><td>Former Codename</td><td>"Vermeer"</td></tr>
+                            <tr><td>Architecture</td><td>"Zen 3"</td></tr>
+                            <tr><td># of CPU Cores</td><td>8</td></tr>
+                            <tr><td>Multithreading (SMT)</td><td>Yes</td></tr>
+                            <tr><td># of Threads</td><td>16</td></tr>
+                            <tr><td>Max. Boost Clock</td><td>Up to 4.6GHz</td></tr>
+                            <tr><td>Base Clock</td><td>3.4GHz</td></tr>
+                            <tr><td>L1 Cache</td><td>512KB</td></tr>
+                            <tr><td>L2 Cache</td><td>4MB</td></tr>
+                            <tr><td>L3 Cache</td><td>32MB</td></tr>
+                            <tr><td>Default TDP</td><td>65W</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(14)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(14)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/4._badge-ci5-10th_1080-1080.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/processors/4._badge-ci5-10th_1080-1080.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/4._badge-ci5-10th_1080-1080.jpg" alt="Image of Core i5-10400" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">Intel Core i5-10400</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.3</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Total Cores</td><td>6</td></tr>
+                            <tr><td>Total Threads</td><td>12</td></tr>
+                            <tr><td>Max Turbo Frequency</td><td>4.30 GHz</td></tr>
+                            <tr><td>Intel® Turbo Boost Technology 2.0 Frequency‡</td><td>4.30 GHz</td></tr>
+                            <tr><td>Processor Base Frequency</td><td>2.90 GHz</td></tr>
+                            <tr><td>Cache</td><td>12 MB Intel® Smart Cache</td></tr>
+                            <tr><td>Bus Speed</td><td>8 GT/s</td></tr>
+                            <tr><td>TDP</td><td>65 W</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(15)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(15)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/5._2613900-ryzen-9-9950x.avif" type="image/avif">
+                    <source media="(min-width: 150px)" srcset="./img/processors/5._2613900-ryzen-9-9950x.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/5._2613900-ryzen-9-9950x.jpg" alt="Image of AMD Ryzen 9 9950x" title="Price: $199.99">
+                </picture>
+                    <div class="content-title">AMD Ryzen 9 9950x</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.4</div>
+                        <div class="content-price">Price: $199.99</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Name</td><td>AMD Ryzen™ 9 9950X</td></tr>
+                            <tr><td>Family</td><td>Ryzen</td></tr>
+                            <tr><td>Series</td><td>Ryzen 9000 Series</td></tr>
+                            <tr><td>Form Factor</td><td>Desktops , Boxed Processor</td></tr>
+                            <tr><td>Market Segment</td><td>Enthusiast Desktop</td></tr>
+                            <tr><td>AMD PRO Technologies</td><td>No</td></tr>
+                            <tr><td>Regional Availability</td><td>Global</td></tr>
+                            <tr><td>Former Codename</td><td>Granite Ridge AM5</td></tr>
+                            <tr><td>Architecture</td><td>Zen 5</td></tr>
+                            <tr><td># of CPU Cores</td><td>16</td></tr>
+                            <tr><td>Multithreading (SMT)</td><td>Yes</td></tr>
+                            <tr><td># of Threads</td><td>32</td></tr>
+                            <tr><td>Max. Boost Clock</td><td>Up to 5.7 GHz</td></tr>
+                            <tr><td>Base Clock</td><td>4.3 GHz</td></tr>
+                            <tr><td>L1 Cache</td><td>1280 KB</td></tr>
+                            <tr><td>L2 Cache</td><td>16 MB</td></tr>
+                            <tr><td>L3 Cache</td><td>64 MB</td></tr>
+                            <tr><td>Default TDP</td><td>170W</td></tr>
+                            <tr><td>Processor Technology for CPU Cores</td><td>TSMC 4nm FinFET</td></tr>
+                            <tr><td>Processor Technology for I/O Die</td><td>TSMC 6nm FinFET</td></tr>
+                            <tr><td>Package Die Count</td><td>3</td></tr>
+                            <tr><td>Unlocked for Overclocking</td><td>Yes</td></tr>
+                            <tr><td>AMD EXPO™ Memory Overclocking Technology</td><td>Yes</td></tr>
+                            <tr><td>Precision Boost Overdrive</td><td>Yes</td></tr>
+                            <tr><td>Curve Optimizer Voltage Offsets</td><td>Yes</td></tr>
+                            <tr><td>AMD Ryzen™ Master Support</td><td>Yes</td></tr>
+                            <tr><td>CPU Socket</td><td>AM5</td></tr>
+                            <tr><td>Supporting Chipsets</td><td>A620 , X670E , X670 , B650E , B650 , X870E , X870 , B840 , B850</td></tr>
+                            <tr><td>CPU Boost Technology</td><td>Precision Boost 2</td></tr>
+                            <tr><td>Instruction Set</td><td>x86-64</td></tr>
+                            <tr><td>Supported Extensions</td><td>AES , AMD-V , AVX , AVX2 , AVX512 , FMA3 , MMX-plus , SHA , SSE , SSE2 , SSE3 , SSE4.1 , SSE4.2 , SSE4A , SSSE3 , x86-64</td></tr>
+                            <tr><td>Thermal Solution (PIB)</td><td>Not Included</td></tr>
+                            <tr><td>Recommended Cooler</td><td>Liquid cooler recommended for optimal performance</td></tr>
+                            <tr><td>Max. Operating Temperature (Tjmax)</td><td>95°C</td></tr>
+                            <tr><td>Launch Date</td><td>08/15/2024</td></tr>
+                            <tr><td>*OS Support</td><td>Windows 11 - 64-Bit Edition , Windows 10 - 64-Bit Edition , RHEL x86 64-Bit , Ubuntu x86 64-Bit</td></tr>
+                        </table>
+                        *Certain AMD technologies may require third-party enablement or activation. Supported features may vary by operating system. Please confirm with system manufacturer for specific features. No technology or product can be completely secure.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(16)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(16)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/processors/6._intel-core-i9-badge-1920x1080_1080-1080.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/processors/6._intel-core-i9-badge-1920x1080_1080-1080.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/6._intel-core-i9-badge-1920x1080_1080-1080.jpg" alt="Image of Core i9-14900K" title="Price: $250.00">
+                </picture>
+                    <div class="content-title">Intel Core i9-14900K</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.9</div>
+                        <div class="content-price">Price: $250.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Total Cores</td><td>24</td></tr>
+                            <tr><td># of Performance-cores</td><td>8</td></tr>
+                            <tr><td># of Efficient-cores</td><td>16</td></tr>
+                            <tr><td>Total Threads</td><td>32</td></tr>
+                            <tr><td>Max Turbo Frequency</td><td>6 GHz</td></tr>
+                            <tr><td>Intel® Thermal Velocity Boost Frequency</td><td>6 GHz</td></tr>
+                            <tr><td>Intel® Turbo Boost Max Technology 3.0 Frequency ‡</td><td>5.8 GHz</td></tr>
+                            <tr><td>Performance-core Max Turbo Frequency</td><td>5.6 GHz</td></tr>
+                            <tr><td>Efficient-core Max Turbo Frequency</td><td>4.4 GHz</td></tr>
+                            <tr><td>Performance-core Base Frequency</td><td>3.2 GHz</td></tr>
+                            <tr><td>Efficient-core Base Frequency</td><td>2.4 GHz</td></tr>
+                            <tr><td>Cache</td><td>36 MB Intel® Smart Cache</td></tr>
+                            <tr><td>Total L2 Cache</td><td>32 MB</td></tr>
+                            <tr><td>Processor Base Power</td><td>125 W</td></tr>
+                            <tr><td>Maximum Turbo Power</td><td>253 W</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(17)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(17)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/processors/7._2613900-ryzen-7-9700x.avif" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/processors/7._2613900-ryzen-7-9700x.png" type="image/png">
+                    <img class="content-banner" src="./img/processors/7._2613900-ryzen-7-9700x.jpg" alt="Image of AMD Ryzen 7 9700X" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">AMD Ryzen 7 9700X</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Name</td><td>AMD Ryzen™ 7 9700X</td></tr>
+                            <tr><td>Family</td><td>Ryzen</td></tr>
+                            <tr><td>Series</td><td>Ryzen 9000 Series</td></tr>
+                            <tr><td>Form Factor</td><td>Desktops , Boxed Processor</td></tr>
+                            <tr><td>Market Segment</td><td>Enthusiast Desktop</td></tr>
+                            <tr><td>AMD PRO Technologies</td><td>No</td></tr>
+                            <tr><td>Regional Availability</td><td>Global</td></tr>
+                            <tr><td>Former Codename</td><td>Granite Ridge AM5</td></tr>
+                            <tr><td>Architecture</td><td>Zen 5</td></tr>
+                            <tr><td># of CPU Cores</td><td>8</td></tr>
+                            <tr><td>Multithreading (SMT)</td><td>Yes</td></tr>
+                            <tr><td># of Threads</td><td>16</td></tr>
+                            <tr><td>Max. Boost Clock</td><td>Up to 5.5 GHz</td></tr>
+                            <tr><td>Base Clock</td><td>3.8 GHz</td></tr>
+                            <tr><td>L1 Cache</td><td>640 KB</td></tr>
+                            <tr><td>L2 Cache</td><td>8 MB</td></tr>
+                            <tr><td>L3 Cache</td><td>32 MB</td></tr>
+                            <tr><td>Default TDP</td><td>65W</td></tr>
+                            <tr><td>Processor Technology for CPU Cores</td><td>TSMC 4nm FinFET</td></tr>
+                            <tr><td>Processor Technology for I/O Die</td><td>TSMC 6nm FinFET</td></tr>
+                            <tr><td>Package Die Count</td><td>2</td></tr>
+                            <tr><td>Unlocked for Overclocking</td><td>Yes</td></tr>
+                            <tr><td>AMD EXPO™ Memory Overclocking Technology</td><td>Yes</td></tr>
+                            <tr><td>Precision Boost Overdrive</td><td>Yes</td></tr>
+                            <tr><td>Curve Optimizer Voltage Offsets</td><td>Yes</td></tr>
+                            <tr><td>AMD Ryzen™ Master Support</td><td>Yes</td></tr>
+                            <tr><td>CPU Socket</td><td>AM5</td></tr>
+                            <tr><td>Supporting Chipsets</td><td>A620 , X670E , X670 , B650E , B650 , X870E , X870 , B840 , B850</td></tr>
+                            <tr><td>CPU Boost Technology</td><td>Precision Boost 2</td></tr>
+                            <tr><td>Instruction Set</td><td>x86-64</td></tr>
+                            <tr><td>Supported Extensions</td><td>AES , AMD-V , AVX , AVX2 , AVX512 , FMA3 , MMX-plus , SHA , SSE , SSE2 , SSE3 , SSE4.1 , SSE4.2 , SSE4A , SSSE3 , x86-64</td></tr>
+                            <tr><td>Thermal Solution (PIB)</td><td>Not Included</td></tr>
+                            <tr><td>Recommended Cooler</td><td>Premium air cooler recommended for optimal performance</td></tr>
+                            <tr><td>Max. Operating Temperature (Tjmax)</td><td>95°C</td></tr>
+                            <tr><td>Launch Date</td><td>08/08/2024</td></tr>
+                            <tr><td>*OS Support</td><td>Windows 11 - 64-Bit Edition , Windows 10 - 64-Bit Edition , RHEL x86 64-Bit , Ubuntu x86 64-Bit</td></tr>
+                        </table>
+                        *Certain AMD technologies may require third-party enablement or activation. Supported features may vary by operating system. Please confirm with system manufacturer for specific features. No technology or product can be completely secure.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(18)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(18)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Graphics Cards</h2>
+        <div class="content-placeholder" id="graphics-cards">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/1._ASUS_Dual_Geforce_RTX_3050_OC_6GB_GDDR6.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/1._ASUS_Dual_Geforce_RTX_3050_OC_6GB_GDDR6.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/1._ASUS_Dual_Geforce_RTX_3050_OC_6GB_GDDR6.jpg" alt="Image of ASUS Dual GeForce RTX 3050 6GB GDDR6 OC Graphics Card (1 YEARS WARRANTY)" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">ASUS Dual GeForce RTX 3050 6GB GDDR6 OC Graphics Card (1 YEARS WARRANTY)</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>NVIDIA Ampere Streaming Multiprocessors: The all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.</li>
+                            <li>2nd Generation RT Cores: Experience 2X the throughput of 1st gen RT Cores, plus concurrent RT and shading for a whole new level of ray-tracing performance.</li>
+                            <li>3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. These cores deliver a massive boost in game performance and all-new AI capabilities.</li>
+                            <li>OC edition: Boost Clock 1537 MHz (OC Mode)/ 1507 MHz (Default Mode)</li>
+                            <li>IP5X dust resistance offers protection from particle ingress for better durability.</li>
+                            <li>A 2-slot design maximizes compatibility and cooling efficiency for superior performance in small chassis.</li>
+                            <li>A stainless steel bracket is harder and more resistant to corrosion.</li>
+                            <li>Auto-Extreme technology uses automation to enhance reliability.</li>
+                            <li>GPU Tweak III provides intuitive performance tweaking, thermal controls, and system monitoring.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(19)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(19)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/2._ASUS_Dual_Geforce_RTX_3050_V2_OC_8GB_GDDR6.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/2._ASUS_Dual_Geforce_RTX_3050_V2_OC_8GB_GDDR6.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/2._ASUS_Dual_Geforce_RTX_3050_V2_OC_8GB_GDDR6.jpg" alt="Image of ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC Graphics Card" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">ASUS Dual GeForce RTX 3050 V2 8GB GDDR6 OC Graphics Card</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.6</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>NVIDIA Ampere Streaming Multiprocessors: The all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.</li>
+                            <li>2nd Generation RT Cores: Experience 2X the throughput of 1st gen RT Cores, plus concurrent RT and shading for a whole new level of ray-tracing performance.</li>
+                            <li>3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. These cores deliver a massive boost in game performance and all-new AI capabilities.</li>
+                            <li>OC mode: Boost clock 1852 MHz (OC mode)/ 1822 MHz (Gaming mode)</li>
+                            <li>Axial-tech fan design features a smaller fan hub that facilitates longer blades and a barrier ring that increases downward air pressure.</li>
+                            <li>A 2-slot Design maximizes compatibility and cooling efficiency for superior performance in small chassis.</li>
+                            <li>0dB Technology lets you enjoy light gaming in relative silence.</li>
+                            <li>GPU Tweak III provides intuitive performance tweaking, thermal controls, and system monitoring.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(20)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(20)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/3._MSI_Geforce_RTX_3050_VENTUS_2X_XS_8G_OC.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/3._MSI_Geforce_RTX_3050_VENTUS_2X_XS_8G_OC.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/3._MSI_Geforce_RTX_3050_VENTUS_2X_XS_8G_OC.jpg" alt="Image of MSI GEFORCE RTX 3050 VENTUS 2X XS 8GB OC GRAPHICS CARD" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">MSI GEFORCE RTX 3050 VENTUS 2X XS 8GB OC GRAPHICS CARD</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <p><strong>Dual Fan Thermal Design</strong></p>
+                        <ul>
+                            <li>Two fans and a huge heatsink ensure a cool and quiet experience for you.</li>
+                        </ul>
+
+                        <p><strong>MSI Center</strong></p>
+                        <ul><li>The exclusive MSI Center software lets you monitor, tweak, and optimize MSI products in real-time.</li></ul>
+
+                        <p><strong>Afterburner Overclocking Utility</strong></p>
+                        <ul>
+                            <li>Supports multi-GPU setups.</li>
+                            <li>OC Scanner: An automated function finds the highest stable overclock settings.</li>
+                            <li>On Screen Display: Provides real-time information of your system's performance.</li>
+                            <li>Predator: In-game video recording.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(21)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(21)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/4._ASUS_DUAL_GeForce_RTX_3060_OC_Edition_12GB_GDDR6.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/4._ASUS_DUAL_GeForce_RTX_3060_OC_Edition_12GB_GDDR6.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/4._ASUS_DUAL_GeForce_RTX_3060_OC_Edition_12GB_GDDR6.jpg" alt="Image of ASUS DUAL GeForce RTX 3060 OC Edition 12GB GDDR6 (1Y WARRANTY)" title="Price: $230.00">
+                </picture>
+                    <div class="content-title">ASUS DUAL GeForce RTX 3060 OC Edition 12GB GDDR6 (1Y WARRANTY)</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.8</div>
+                        <div class="content-price">Price: $230.00</div>
+                    </div>
+                    <div class="content-description">
+                        ASUS Dual GeForce RTX™ 3060 V2 OC Edition 12GB GDDR6 with two powerful Axial-tech fans and a 2-slot design for broad compatibility
+                        <ul>
+                            <li>NVIDIA Ampere Streaming Multiprocessors: The building blocks for the world’s fastest, most efficient GPUs, the all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.</li>
+                            <li>2nd Generation RT Cores: Experience 2X the throughput of 1st gen RT Cores, plus concurrent RT and shading for a whole new level of ray tracing performance.</li>
+                            <li>3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. These cores deliver a massive boost in game performance and all-new AI capabilities.</li>
+                            <li>OC mode: Boost clock 1867 MHz (OC mode)/ 1837 MHz (Gaming mode)</li>
+                            <li>Axial-tech fan design features a smaller fan hub that facilitates longer blades and a barrier ring that increases downward air pressure.</li>
+                            <li>A 2-slot Design maximizes compatibility and cooling efficiency for superior performance in small chassis.</li>
+                            <li>0dB Technology lets you enjoy light gaming in relative silence.</li>
+                            <li>A stainless steel bracket is harder and more resistant to corrosion.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(22)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(22)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/5._ZOTAC_GAMING_GeForce_RTX_3060_Twin_Edge_OC.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/5._ZOTAC_GAMING_GeForce_RTX_3060_Twin_Edge_OC.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/5._ZOTAC_GAMING_GeForce_RTX_3060_Twin_Edge_OC.jpg" alt="Image of ZOTAC GAMING RTX 3060 12GB TWIN EDGE OC" title="Price: $200.00">
+                </picture>
+                    <div class="content-title">ZOTAC GAMING RTX 3060 12GB TWIN EDGE OC</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $200.00</div>
+                    </div>
+                    <div class="content-description">
+                        <p>Get Amplified with the ZOTAC GAMING GeForce RTX™ 30 Series based on the NVIDIA Ampere architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and high-speed GDDR6 memory, the ZOTAC GAMING GeForce RTX 3060 Twin Edge OC gives rise to amplified gaming with high fidelity.</p>
+                        <p>Features:</p>
+                        <ul>
+                            <li>2nd Gen Ray Tracing Cores</li>
+                            <li>3rd Gen Tensor Cores </li>
+                            <li>IceStorm 2.0 Advanced Cooling</li>
+                            <li>Active Fan Control with FREEZE Fan Stop</li>
+                            <li>Metal Backplate</li>
+                            <li>FireStorm Utility (Download HERE)</li>
+                            <li>VR Ready</li>
+                            <li>3 years standard warranty + 2 years after registration. Learn more</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(23)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(23)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/6._GeForce_RTX™_4060_VENTUS_2X_BLACK_8G_OC.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/6._GeForce_RTX™_4060_VENTUS_2X_BLACK_8G_OC.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/6._GeForce_RTX™_4060_VENTUS_2X_BLACK_8G_OC.jpg" alt="Image of MSI GEFORCE RTX 4060 VENTUS OC 2X 8GB GDDR6X BLACK GRAPHICS" title="Price: $167.99">
+                </picture>
+                    <div class="content-title">MSI GEFORCE RTX 4060 VENTUS OC 2X 8GB GDDR6X BLACK GRAPHICS</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5</div>
+                        <div class="content-price">Price: $167.99</div>
+                    </div>
+                    <div class="content-description">
+                        <p><strong>WITH DLSS 3</strong></p>
+                        <p>Game, stream, create. The GeForce RTX™ 4060 lets you take on the latest games and apps with the ultra-efficient NVIDIA Ada Lovelace architecture. Experience immersive, AI-accelerated gaming with ray tracing and DLSS 3, and supercharge your creative process and productivity with NVIDIA Studio.</p>
+                        <p><strong>Boost Clock / Memory Speed</strong></p>
+                        <ul>
+                            <li>2490 MHz / 17 Gbps</li>
+                            <li>8GB GDDR6</li>
+                            <li>DisplayPort x 3 (v1.4a)</li>
+                            <li>HDMI™ x 1 (Supports 4K@120Hz HDR, 8K@60Hz HDR, and Variable Refresh Rate as specified in HDMI™ 2.1a)</li>
+                        </ul>
+                        <p><strong>Dual Fan Thermal Design</strong></p>
+                        <ul>
+                            <li><strong>TORX Fan 4.0:</strong> A masterpiece of teamwork, fan blades work in pairs to create unprecedented levels of focused air pressure.</li>
+                            <li><strong>Zero Frozr:</strong> The fans completely stop when temperatures are relatively low, eliminating all noise.</li>
+                        </ul>
+                        <p><strong>Reinforcing Backplate</strong></p>
+                        <ul>
+                            <li>The reinforcing backplate features a flow-through design that provides additional ventilation.</li>
+                        </ul>
+                        <p><strong>MSI Center</strong></p>
+                        <ul>
+                            <li>The exclusive MSI Center software lets you monitor, tweak, and optimize MSI products in real-time.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(24)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(24)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/7._XLR8-RTX-4060-Ti-8GB-VERTO-OC-Dual-Fan-ra-logo.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/graphics-cards/7._XLR8-RTX-4060-Ti-8GB-VERTO-OC-Dual-Fan-ra-logo.png" type="image/png">
+                    <img class="content-banner" src="./img/graphics-cards/7._XLR8-RTX-4060-Ti-8GB-VERTO-OC-Dual-Fan-ra-logo.jpg" alt="Image of PNY GeForce RTX 4060 TI 8GB VERTO Overclocked Dual Fan DLSS 3" title="Price: $199.99">
+                </picture>
+                    <div class="content-title">PNY GeForce RTX 4060 TI 8GB VERTO Overclocked Dual Fan DLSS 3</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.3</div>
+                        <div class="content-price">Price: $199.99</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and full ray tracing</li>
+                            <li>Dedicated Ray Tracing Cores</li>
+                            <li>Dedicated Tensor Cores</li>
+                            <li>NVIDIA DLSS 3</li>
+                            <li>Game Ready and NVIDIA Studio Drivers</li>
+                            <li>NVIDIA® GeForce Experience™</li>
+                            <li>NVIDIA Broadcast</li>
+                            <li>NVIDIA G-SYNC®</li>
+                            <li>NVIDIA GPU Boost™</li>
+                            <li>PCI Express® Gen 4</li>
+                            <li>Microsoft DirectX® 12 Ultimate</li>
+                            <li>Vulkan RT APIs, Vulkan 1.3, OpenGL 4.6</li>
+                            <li>HDCP 2.3</li>
+                            <li>DisplayPort 1.4a, up to 4K at 240Hz or 8K at 60Hz with DSC, HDR</li>
+                            <li>As specified in HDMI 2.1a: up to 4K 240Hz or 8K 60Hz with DSC, Gaming VRR, HDR</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(25)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(25)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Motherboards</h2>
+        <div class="content-placeholder" id="motherboards">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/1._B760 GAMING PLUS WIFI.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/1._B760 GAMING PLUS WIFI.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/1._B760 GAMING PLUS WIFI.jpg" alt="Image of MSI B760 GAMING PLUS WIFI DDR5" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">MSI B760 GAMING PLUS WIFI DDR5</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        B760 GAMING PLUS WIFI is designed with tons of connectivity, flexible tools, and convenient Wi-Fi solution with DDR5 memory version for gamers who want all.
+                        <ul>
+                            <li>Support Intel® Core™ 14th/ 13th/ 12th Gen Processors, Intel® Pentium® Gold and Celeron® Processors for LGA 1700 socket</li>
+                            <li>Supports DDR5 Memory, Dual Channel DDR5 6800+MHz (OC)</li>
+                            <li>Enhanced Power Design: 12+1 Duet Rail Power System with P-PAK, 8-pin + 4-pin CPU power connectors, Core Boost, Memory Boost</li>
+                            <li>Premium Thermal Solution: Extended Heatsink, MOSFET thermal pads rated for 7W/mK, additional choke thermal pads are built for high performance system and non-stop gaming experience</li>
+                            <li>Lightning Fast Game experience: PCIe 4.0 slot, Lightning Gen 4 x4 M.2 with M.2 Shield Frozr, Turbo USB 3.2 Gen 2 10G</li>
+                            <li>2.5G LAN with Wi-Fi 6E Solution: Upgraded network solution for professional and multimedia use. Delivers a secure, stable and fast network connection</li>
+                            <li>High Quality PCB: 6-layer PCB made by 2oz thickened copper</li>
+                            <li>Audio Boost: Reward your ears with studio grade sound quality for the most immersive gaming experience</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(26)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(26)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/2._amd_b450.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/2._amd_b450.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/2._amd_b450.jpg" alt="Image of ASUS PRIME B450M-K II" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">ASUS PRIME B450M-K II</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        AMD B450 (Ryzen AM4) micro ATX motherboard with M.2 support, HDMI/DVI-D/D-Sub, SATA 6 Gbps, 1 Gb Ethernet, USB 3.2 Gen 1 Type-A, BIOS FlashBack™
+                        <ul>
+                            <li>Comprehensive cooling: PCH heatsink, and Fan Xpert</li>
+                            <li>Ultrafast connectivity: M.2 support, 1 Gb Ethernet, and USB 3.2 Gen 1 Type-A</li>
+                            <li>5X Protection III: Multiple hardware safeguards for all-around system protection</li>
+                            <li>LED illumination: Lighting control for both PCIe slot and audio trace paths</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(27)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(27)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/3._Z790 PROJECT ZERO.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/3._Z790 PROJECT ZERO.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/3._Z790 PROJECT ZERO.jpg" alt="Image of MSI Z790 PROJECT ZERO DDR5 WIFI" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">MSI Z790 PROJECT ZERO DDR5 WIFI</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        The Z790 PROJECT ZERO features a unique back-connect design that reduces the complexity of cable management, resulting in a neater and more aesthetically pleasing appearance for the system. It’s compatible with Intel 14th /13th/ 12th Processors, supports DDR5, and comes equipped with a 2.5G LAN and Wi-Fi 7 solution. This makes it an excellent choice among ATX motherboards. 
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(28)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(28)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/4._CVN Z790D5 Gaming Pro V20.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/4._CVN Z790D5 Gaming Pro V20.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/4._CVN Z790D5 Gaming Pro V20.jpg" alt="Image of COLORFUL CVN Z790D5 GAMING PRO V20" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">COLORFUL CVN Z790D5 GAMING PRO V20</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>CVN series customized frost cooling armor</li>
+                            <li>PCIe slot custom metal armor</li>
+                            <li>16+1+1 phase digital power supply design (Dr MOS 55A)</li>
+                            <li>Provides 4 PCIe 4.0 x4 M.2 SSD slots</li>
+                            <li>Provide one USB 3.2 Gen 2x2 20Gbps Type-C and one USB 3.2 Gen 2 10Gbps Type-A high-speed rear interface</li>
+                            <li>Equipped with Realtek 2.5G high-speed wired network card<li>
+                            <li>Support the iGame Center light efficiency control software, which can synchronously adjust the light efficiency of the radiator, cooling fan and memory</li>
+                            <li>The I/O panel supports one-key BIOS upgrade</li>
+                            <li>Equipped with CNVI WiFi/BT slot, supporting extended WiFi module</li>
+                            <li>Six protection technologies, more stable product operation</li>
+                            <li>200 processes are strictly tested with guaranteed quality</li>
+                            <li>PCB atomization process comprehensively upgraded</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(29)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(29)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/5._CVN B650 Gaming Frozen.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/5._CVN B650 Gaming Frozen.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/5._CVN B650 Gaming Frozen.jpg" alt="Image of COLORFUL CVN B650 FROZEN V14" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">COLORFUL CVN B650 FROZEN V14</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>CVN series exclusive customized white motherboard</li>
+                            <li>CVN series customized frost cooling armor with full coverage condensing fins to enhance heat dissipation</li>
+                            <li>Supports dual channel DDR5-6200 (OC) MHz memory</li>
+                            <li>Adopting 16+2+1 phase reinforced power supply design, F.C.C ferrite inductor (Dr. MOS 55A)</li>
+                            <li>Provide 2 PCIe 5.0 x4 M.2 SSD slots and 1 PCIe 4.0 x4 M.2 SSD slot</li>
+                            <li>Provide 1 USB 3.2 Gen 2 10Gbps Type-C and 1 USB 3.2 Gen 2 10Gbps Type-A high-speed rear interface</li>
+                            <li>Equipped with Realtek 2.5G fast wired network card and AX200 WiFi 6 wireless network card, supporting Bluetooth 5.1</li>
+                            <li>Support iGame Center light efficiency control software, which can synchronously adjust the light efficiency of heat sinks, cooling fans, and memory</li>
+                            <li>I/O backplane supports one click BIOS upgrade function</li>
+                            <li>Six major protective technologies ensure more stable product operation</li>
+                            <li>Strict testing of 200 processes with guaranteed quality</li>
+                            <li>Comprehensive upgrade of PCB atomization process</li>
+                            <li>"410" high-quality service with guaranteed after-sales service</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(30)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(30)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/6._msi-x870e-tomahawk-wifi.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/6._msi-x870e-tomahawk-wifi.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/6._msi-x870e-tomahawk-wifi.jpg" alt="Image of MSI MAG X870E TOMAHAWK WIFI" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">MSI MAG X870E TOMAHAWK WIFI</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        MAG X870E TOMAHAWK WIFI is designed for gamers with a stable, durable and DIY friendly foundation for their PC builds. Coming up with true Wi-Fi 7 solution, 5G LAN, USB 40Gbps, PCIe 5.0 solutions, Supplemental PCIe Power, and exclusive EZ DIY features, it's ready for the battlefield of AMD Ryzen™ 9000 series processors.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(31)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(31)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/7._pro b760m-a wifi.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/motherboards/7._pro b760m-a wifi.png" type="image/png">
+                    <img class="content-banner" src="./img/motherboards/7._pro b760m-a wifi.jpg" alt="Image of MSI Pro B760M-A WIFI DDR5" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">MSI Pro B760M-A WIFI DDR5</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>Support Intel® Core™ 14th/ 13th/ 12th Gen Processors, Intel® Pentium® Gold and Celeron® Processors for LGA 1700 socket</li>
+                            <li>Supports DDR5 Memory, Dual Channel DDR5 6800+MHz (OC)</li>
+                            <li>Enhanced Power Design: 12+1 Duet Rail Power System with P-PAK, 8-pin + 4-pin CPU power connectors, Core Boost, Memory Boost</li>
+                            <li>Premium Thermal Solution: Extended Heatsink, MOSFET thermal pads rated for 7W/mK and additional choke thermal pads are built for high performance system and non-stop gaming experience</li>
+                            <li>High Quality PCB: 6-layer PCB made by 2oz thickened copper</li>
+                            <li>Lightning Fast Game experience: PCIe 4.0 slot, Lightning Gen 4 x4 M.2</li>
+                            <li>Intel Turbo USB 3.2 Gen 2: Powered by Intel USB 3.2 Gen2 controller, Turbo USB ensures an uninterrupted connection with more stability and fastest USB speeds</li>
+                            <li>2.5G LAN with Wi-Fi 6E Solution: Upgraded network solution for professional and multimedia use. Delivers a secure, stable and fast network connection</li>
+                            <li>AUDIO BOOST: Reward your ears with studio grade sound quality for the most immersive gaming experience</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(32)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(32)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">RAM Sticks</h2>
+        <div class="content-placeholder" id="ram-cards">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/1._TEAM TFORCE DELTA TUF RGB 32GB (16X2) 5600MHZ - Intel.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/1._TEAM TFORCE DELTA TUF RGB 32GB (16X2) 5600MHZ - Intel.png" type="image/png">
+                    <img class="content-banner" src="./img/memory-sticks/1._TEAM TFORCE DELTA TUF RGB 32GB (16X2) 5600MHZ - Intel.jpg" alt="Image of TEAM TFORCE DELTA TUF RGB 32GB (16X2) 5600MHZ - AMD" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">TEAM TFORCE DELTA TUF RGB 32GB (16X2) 5600MHZ - AMD</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.6</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        3 Years Warranty
+                        <table>
+                            <tr> <td>Speed</td> <td>DDR5-5600</td> </tr>
+                            <tr> <td>Form Factor</td> <td>288-pin DIMM (DDR5)</td> </tr>
+                            <tr> <td>Modules</td> <td>2 x 16GB</td> </tr>
+                            <tr> <td>Color</td> <td>Black</td> </tr>
+                            <tr> <td>First Word Latency</td> <td>13.571 ns</td> </tr>
+                            <tr> <td>CAS Latency</td> <td>38</td> </tr>
+                            <tr> <td>Voltage</td> <td>1.2 V</td> </tr>
+                            <tr> <td>ECC / Registered</td> <td>Non-ECC / Unbuffered</td> </tr>
+                            <tr> <td>Heat Spreader</td> <td>Yes</td> </tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(33)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(33)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/2._TEAM TFORCE DELTA RGB 64GB (32X2) 6000MHZ - AMD.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/2._TEAM TFORCE DELTA RGB 64GB (32X2) 6000MHZ - AMD.png" type="image/png">
+                    <img class="content-banner" src="./img/memory-sticks/2._TEAM TFORCE DELTA RGB 64GB (32X2) 6000MHZ - AMD.jpg" alt="Image of TEAM TFORCE DELTA RGB 64GB (32X2) 6000MHZ - AMD" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">TEAM TFORCE DELTA RGB 64GB (32X2) 6000MHZ - AMD</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.8</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                    <ul>
+                        <li>RGB Colors & 120° Ultra-Wide Lighting</li>
+                        <li>Supports Intel XMP3.0 for One-Click Overclocking</li>
+                        <li>Power Management ICs (PMIC) Equipped for Stable, Efficient Power Usage</li>
+                        <li>Strengthened PMIC Cooling Design</li>
+                        <li>On-die ECC for Stable System</li>
+                        <li>High-Quality ICs Selected for Stability & Reliability</li>
+                        <li>Equipped with Smart RGB IC Controller that Supports Various Lighting Effect Software</li>
+                        <li>Taiwan Utility Patent (number:M640994)</li>
+                        <li>Innovative circuit structure design lowering power consumption and heat</li>
+                        <li>(Invention patent number in Taiwan: I842298)</li>
+                        <li>(Invention patent number in the US: US12111715B2)</li>
+                    </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(34)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(34)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/3._TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400MHZ.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/3._TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400MHZ.png" type="image/png">
+                    <img class="content-banner" src="./img/memory-sticks/3._TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400MHZ.jpg" alt="Image of TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400MHZ" title="Price: $300.00">
+                </picture>
+                    <div class="content-title">TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400MHZ</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.6</div>
+                        <div class="content-price">Price: $300.00</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>A redefinition of everything by outstanding performance</li>
+                            <li>Design for releasing unlimited creativity</li>
+                            <li>Every recognition of memory overturned</li>
+                            <li>Reliable performance</li>
+                            <li>Lifetime warranty for maximum protection</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(35)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(35)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/4._DOMINATOR_TITANIUM_RGB_DDR5_BLACK_2UP_Artboard02_AA.avif" type="image/avif">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/4._DOMINATOR_TITANIUM_RGB_DDR5_BLACK_2UP_Artboard02_AA.png" type="image/png">
+                    <img class="content-banner" src="./img/memory-sticks/4._DOMINATOR_TITANIUM_RGB_DDR5_BLACK_2UP_Artboard02_AA.jpg" alt="Image of CORSAIR DOMINATOR TITANIUM RGB 64GB (2X32GB) DDR5 6400MHZ - INTEL XMP" title="Price: $355.99">
+                </picture>
+                    <div class="content-title">CORSAIR DOMINATOR TITANIUM RGB 64GB (2X32GB) DDR5 6400MHZ - INTEL XMP</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.3</div>
+                        <div class="content-price">Price: $355.99</div>
+                    </div>
+                    <div class="content-description">
+                        CORSAIR DOMINATOR TITANIUM RGB DDR5 Memory combines clean, refined styling with superior die-cast aluminum construction and advanced lighting design for a premium memory experience. Optimized for Intel® systems.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(36)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(36)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/5._dominator_32gb.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/memory-sticks/5._dominator_32gb.png" type="image/png">
+                    <img class="content-banner" src="./img/memory-sticks/5._dominator_32gb.jpg" alt="Image of CORSAIR DOMINATOR TITANIUM RGB DDR5 6000MHZ - AMD Expo & Intel XMP (32GB-64GB) KIT" title="Price: $355.99">
+                </picture>
+                    <div class="content-title">CORSAIR DOMINATOR TITANIUM RGB DDR5 6000MHZ - AMD Expo & Intel XMP (32GB-64GB) KIT</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $355.99</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Heat Spreader</td> <td>Aluminum</td></tr>
+                            <tr><td>LED Lighting</td> <td>RGB</td></tr>
+                            <tr><td>Memory Series</td> <td>DOMINATOR TITANIUM</td></tr>
+                            <tr><td>Memory Size</td> <td>32GB</td></tr>
+                            <tr><td>Performance Profile</td> <td>EXPO & XMP</td></tr>
+                            <tr><td>SPD Speed</td> <td>4800MHz</td></tr>
+                            <tr><td>Tested Latency</td> <td>30-36-36-76</td></tr>
+                            <tr><td>Tested Speed (Up To)</td> <td>6000</td></tr>
+                            <tr><td>Fan Included</td> <td>No</td></tr>
+                            <tr><td>Memory Color</td> <td>GREY</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(37)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(37)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="title">Storage Devices</h2>
+        <div class="content-placeholder" id="storage-devices">
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" srcset="./img/storage-devices/1._01_990_OF_PC_overview.webp" type="image/webp">
+                    <source media="(min-width: 150px)" srcset="./img/storage-devices/1._01_990_OF_PC_overview.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/1._01_990_OF_PC_overview.jpg" alt="Image of Samsung 990 Pro" title="Price: $79.99">
+                </picture>
+                    <div class="content-title">Samsung 990 Pro</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.8</div>
+                        <div class="content-price">Price: $79.99</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li><strong>The Ultimate SSD: </strong>Reach max performance of PCIe® 4.0. Experience longer-lasting, opponent-blasting speed. The in-house controller's smart heat control delivers supreme power efficiency while maintaining ferocious speed and performance, to always keep you at the top of your game.</li>
+                            <li><strong>PCIe 4.0 speed maximized: </strong>Huge speed boost. 990 PRO offers sequential read/write speeds up to 7,450/6,900 MB/s reaching near the max performance of PCIe® 4.0. 40% and 55% faster random read/write speeds than 980 PRO 2TB - up to 1,400K/1,550K IOPS, while 4TB even higher random read speed of up to 1,600K IOPS.</li>
+                            <li><strong>Breakthrough power efficiency: </strong>More power-efficient performance. Higher performance usually consumes more power. But, 990 PRO uses less power with over 50% improved performance per Watt over 980 PRO. This low-power design makes max PCIe®4.0 performance possible with optimal power efficiency.</li>
+                            <li><strong>Smart thermal solution: </strong>Speed beyond the heat. The nickel-coated controller and cutting-edge thermal control algorithm manage heat for unwavering performance. The heat spreader label controls NAND chip heat, while Dynamic Thermal Guard keeps temperatures optimal.</li>
+                            <li><strong>Game like a pro: </strong>Secure victory with 990 PRO's expanded 4TB capacity, empowering you with a random read speed of up to 1,600K IOPS. Witness faster loading times on your PC and PlayStation® 5, as it breathes life into your games.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(38)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(38)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/2._wd-black-sn850x-nvme-ssd-front.png.wdthumb.1280.1280.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/2._wd-black-sn850x-nvme-ssd-front.png.wdthumb.1280.1280.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/2._wd-black-sn850x-nvme-ssd-front.png.wdthumb.1280.1280.jpg" alt="Image of WD Black SN850X" title="Price: $99.99">
+                </picture>
+                    <div class="content-title">WD Black SN850X</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.9</div>
+                        <div class="content-price">Price: $99.99</div>
+                    </div>
+                    <div class="content-description">
+                        Crush load times and slash throttling, lagging, and texture pop-ins with the WD_BLACK SN850X NVMe™ SSD. Available in capacities of 1TB up to 8TB2, this gaming drive is built for top-tier performance. With 7,300MB/s1 speeds (1TB - 4TB models) and a heatsink option to maintain performance, you can enjoy your favorite games without worrying about lag. Plus, the downloadable WD_BLACK Dashboard (Windows® only) can automatically turn on Game Mode 2.0 features. The WD_BLACK SN850X NVMe™ SSD delivers a smooth, fast experience —and the innovations that let you compete at your absolute peak.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(39)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(39)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/3._Crucial_T700_1TB_PCIe_Gen5_NVMe_M.2_SSD.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/3._Crucial_T700_1TB_PCIe_Gen5_NVMe_M.2_SSD.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/3._Crucial_T700_1TB_PCIe_Gen5_NVMe_M.2_SSD.jpg" alt="Image of Crucial T700 Pro" title="Price: $89.99">
+                </picture>
+                    <div class="content-title">Crucial T700 Pro</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.7</div>
+                        <div class="content-price">Price: $89.99</div>
+                    </div>
+                    <div class="content-description">
+                        The Crucial T700 PCIe® 5.0 NVMe™ SSD offers speeds of up to 12,400MB/s sequential reads and up to 11,800MB/s sequential writes (up to 1,500K IOPS random reads/writes) for faster gaming, video editing, 3D rendering and heavy workload applications.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(40)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(40)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/4._Seagate_FireCuda_530.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/4._Seagate_FireCuda_530.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/4._Seagate_FireCuda_530.jpg" alt="Image of Seagate Firecuda 530" title="Price: $99.99">
+                </picture>
+                    <div class="content-title">Seagate Firecuda 530</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.6</div>
+                        <div class="content-price">Price: $99.99</div>
+                    </div>
+                    <div class="content-description">
+                        <ul>
+                            <li>Speed reigns—Seagate’s FireCuda 530 dominates the SSD lineup, delivering pure performance, absolute power, the most advanced components, and unrivaled endurance</li>
+                            <li>Exhilarating performance up to 7300MB/s—harness the full power of PCIe Gen4 speeds to dominate next-generation games and apps</li>
+                            <li>Our fastest FireCuda SSD ever built for the ultimate in sustained, pro-level gaming and accelerated content creation—with transfer speeds up to 2x faster than PCIe Gen3 M.2 NVMe SSDs and 12x faster than SATA SSDs</li>
+                            <li>Includes custom built low-profile heatsink designed by EKWB and Seagate to help minimize thermal throttling and maintain peak performance for longer time periods of time</li>
+                            <li>Enjoy long-term peace of mind with the included five-year limited warranty and three years of Rescue Data Recovery Services</li>
+                            <li>The available storage capacity may vary.</li>
+                        </ul>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(41)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(41)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/5._Samsung_980_Pro.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/5._Samsung_980_Pro.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/5._Samsung_980_Pro.jpg" alt="Image of Samsung 980 Pro" title="$Price: 119.99">
+                </picture>
+                    <div class="content-title">Samsung 980 Pro</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.8</div>
+                        <div class="content-price">Price: $119.99</div>
+                    </div>
+                    <div class="content-description">
+                        <p>Genuine PCIe 4.0 NVMe™ speed (up to 7,000/5,000MB/s for read/write speed). Ideal for heavy computing, high resolution graphics and PC gaming.</p>
+                        <p>For console gaming, compatible only with Playstation® 5. Must be installed with a heatsink (sold separately).</p>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(42)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(42)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/6._crucial-mx500-sd-thumbnail.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/6._crucial-mx500-sd-thumbnail.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/6._crucial-mx500-sd-thumbnail.jpg" alt="Image of Crucial MX500" title="$Price: 130.00">
+                </picture>
+                    <div class="content-title">Crucial MX500</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.9</div>
+                        <div class="content-price">Price: $130.00</div>
+                    </div>
+                    <div class="content-description">
+                        <table>
+                            <tr><td>Speed</td><td>Sequential reads/writes up to 560/510MB/s</td></tr>
+                            <tr><td>Capacities</td><td>250GB, 500GB, 1TB, 2TB, 4TB</td></tr>
+                            <tr><td>Interface/Form Factor</td><td>SATA 6Gb/s 2.5-inch (7mm)</td></tr>
+                            <tr><td>Energy Efficient</td><td>45x more energy efficient than a typical hard drive3</td></tr>
+                            <tr><td>Award Winning</td><td>16+ awards from reviewers worldwide</td></tr>
+                            <tr><td>Warranty</td><td>5-year limited warranty5</td></tr>
+                        </table>
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(43)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(43)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+            <div class="content">
+                <picture class="content-banner">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/7._wd-blue-sn5000-nvme-ssd-500gb-front.png.wdthumb.1280.1280.webp" type="image/webp">
+                    <source media="(min-width: 150px)" src="./img/storage-devices/7._wd-blue-sn5000-nvme-ssd-500gb-front.png.wdthumb.1280.1280.png" type="image/png">
+                    <img class="content-banner" src="./img/storage-devices/7._wd-blue-sn5000-nvme-ssd-500gb-front.png.wdthumb.1280.1280.jpg" alt="Image of WD Blue SN5000 4TB" title="$Price: 176.99">
+                </picture>
+                    <div class="content-title">WD Blue SN5000 4TB</div>
+                    <div class="content-stats">
+                        <div class="content-rating">Rating: 4.5</div>
+                        <div class="content-price">Price: $176.99</div>
+                    </div>
+                    <div class="content-description">
+                        The WD Blue SN5000 NVMe™ SSD is next-generation storage designed for creators and professionals. Fuel your AI-enabled applications and accelerate your workflow with NVMe, PCIe® Gen 4, and Western Digital nCache™ 4.0 technology. Plus, create without limits with up to 4TB1 capacity. No matter your creative process, the WD Blue SN5000 NVMe SSD makes every step easier - and shortens the time between ideating and finalizing your creative vision.
+                    </div>
+                <div class="content-buttons">
+                    <button class="button" onclick="buyNow(44)" id="btnBuyNow">Buy Now</button>
+                    <button class="button" onclick="addToCart(44)" id="btnAddToCart">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="cart-and-favorites">
+            <div id="cart">
+                <div id="scroll">
+                    <table id="cart-items">
+                    </table>
+                </div>
+                <div>Total Price: $<span id="total-price"></span></div>
+                <div>Number of Items: <span id="total-items"></span></div>
+                <button class="cart-button" id="btnClearCart" onclick="clearCart()">Clear Cart</button>
+                <a class="cart-button" id="btnBuyBatch" href="./payments/index.html">Buy Batch</a>
+                <button class="cart-button" id="btnShowCartItems" onclick="toggleCartVisibility()">Show Cart Items</button>
+                <button class="cart-button" id="btnAddCartToFavorites" onclick="addCartToFavorites()">Save Order as Favorite</button>
+            </div>
+            <div id="favorites">
+                <div id="favorites-scroll">
+                    <table id="favorites-table">
+                    </table>
+                </div>
+                <div class="favorites-counter">Number of Favorites: <span id="favorites-count"></span></div>
+                <button class="favorites-button" onclick="toggleFavorites()" id="btnShowFavorites">Show Favorites</button>
+                <button class="favorites-button" onclick="addFavoritesToCart()" id="btnAddFavoritesToCart">Apply Favorites</button>
             </div>
         </div>
     </main>
     <footer>
-        <div class="socials">
+        <div id="main-text">
+            Trusted by the world's most popular game and game merchandise companies:
+        </div>
+        <div id="trusted-companies-and-sponsorships">
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).jpg" alt="Bandai Namco Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.jpg" alt="Electronic Arts Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/microsoft-game-studios-vector-logo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/microsoft-game-studios-vector-logo.jpg" alt="Microsoft Game Studios Vector Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Nintendo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Nintendo.jpg" alt="Nintendo Logo">
+            </picture>
+        </div>
+        <div id="socials">
             Follow us on: 
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
-        <div class="terms">
+        <div id="terms">
             <a href="#">Terms and Conditions</a>
             <a href="#">Privacy</a>
         </div>
-        <div id="copyright">&copy;2024 Florem Game Store. All rights reserved.</div>
+        <div id="copyright">&copy;2025 Florem Game Electronics. All rights reserved.</div>
         <!--Source:
             Consoles, Ratings and Descriptions:
             - https://www.techradar.com/news/best-consoles
+
+            Source for the ideas for the items above:
+            1. https://www.pcmag.com/picks/the-best-cpus
+            2. https://mdcomputers.lk/product-category/graphic-card/brandnew-graphic-card/
+            3. https://www.nanotek.lk/category/motherboards
+            4. https://www.nanotek.lk/category/memory-ram
+            5. https://www.gamesradar.com/best-ssd-for-gaming/
 
             Peripherals:
             - https://mdcomputers.lk/
@@ -146,7 +1481,52 @@
             3. https://mdcomputers.lk/product/gamdias-aura-gp750-750-watt-efficient-power-supply-2-years-warranty/
             4. https://mdcomputers.lk/product/koorui-gn02-27-1080p-fhd-va-240hz-srgb-100/
             5. https://mdcomputers.lk/product/logitech-g923-trueforce-sim-racing-wheel/
-            6. https://mdcomputers.lk/product/asus-rog-strix-geforce-rtx-4070-super-12gb-gddr6x-oc-graphics-card-3-years-warranty/-->
+            6. https://mdcomputers.lk/product/asus-rog-strix-geforce-rtx-4070-super-12gb-gddr6x-oc-graphics-card-3-years-warranty/
+            
+            Processors:
+            1. https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html
+            2. https://www.intel.com/content/www/us/en/products/sku/230501/intel-core-i513400f-processor-20m-cache-up-to-4-60-ghz/specifications.html
+            3. https://www.nanotek.lk/product/amd-ryzen-7-5700x-up-to-46ghz-8-cores-16-threads-36m-cache
+            4. https://www.intel.com/content/www/us/en/products/sku/199271/intel-core-i510400-processor-12m-cache-up-to-4-30-ghz/specifications.html
+            5. https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x.html
+            6. https://www.intel.com/content/www/us/en/products/sku/236773/intel-core-i9-processor-14900k-36m-cache-up-to-6-00-ghz/specifications.html
+            7. https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700x.html
+            
+            Graphics Cards:
+            1. https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx3050-o6g/
+            2. https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx3050-o8g-v2/
+            3. https://www.msi.com/Graphics-Card/GeForce-RTX-3050-VENTUS-2X-XS-8G-OC
+            4. https://mdcomputers.lk/product/asus-dual-geforce-rtx-3060-oc-edition-12gb-gddr6-1y-warranty/
+            5. https://www.zotac.com/eg/product/graphics_card/zotac-gaming-geforce-rtx-3060-twin-edge-oc-0
+            6. https://www.msi.com/Graphics-Card/GeForce-RTX-4060-VENTUS-2X-BLACK-8G-OC
+            7. https://www.pny.com/geforce-rtx-4060-ti-8gb-verto-dual-fan-oc
+            
+            Motherboards:
+            1. https://www.msi.com/Motherboard/B760-GAMING-PLUS-WIFI
+            2. https://www.asus.com/motherboards-components/motherboards/prime/prime-b450m-k-ii/
+            3. https://www.msi.com/Motherboard/Z790-PROJECT-ZERO
+            4. https://en.colorful.cn/en/home/product?mid=84&id=c73323d7-de0a-4648-a146-854b7cf412ba
+            5. https://en.colorful.cn/en/home/product?mid=84&id=038ea87b-9313-4939-8c7d-03bac13eac41
+            6. https://www.msi.com/Motherboard/MAG-X870E-TOMAHAWK-WIFI/
+            7. https://www.msi.com/Motherboard/PRO-B760M-A-WIFI
+            
+            RAM Sticks:
+            1. https://www.nanotek.lk/category/memory-ram
+            2. https://www.teamgroupinc.com/en/product-detail/memory/T-FORCE/delta-rgb-ddr5-white/delta-rgb-ddr5-white-FF4D564G6000HC38ADC01/
+            3. https://www.teamgroupinc.com/en/product-detail/memory/T-CREATE/expert-u-dimm-ddr5-black/expert-u-dimm-ddr5-black-CTCED564G6400HC34BDC01/
+            4. https://www.corsair.com/us/en/p/memory/cmp64gx5m2b6400c32/dominator-titanium-rgb-2x32gb-ddr5-dram-6400mt-s-cl32-intel-xmp-memory-kit-cmp64gx5m2b6400c32?srsltid=AfmBOordf7Gwms41KZ6uBFdJ_Zdu4ir5yDteZXj4qnUE6JWJKmu-4NrA
+            5. https://www.nanotek.lk/product/corsair-dominator-titanium-rgb-ddr5-6000mhz-amd-expo-intel-xmp-32gb-64gb-kit
+            
+            Storage Devices:
+            1. https://semiconductor.samsung.com/consumer-storage/internal-ssd/990-pro/
+            2. https://shop.sandisk.com/en-in/products/ssd/internal-ssd/wd-black-sn850x-nvme-ssd?sku=WDS100T2X0E-00BCA0
+            3. https://eu.crucial.com/ssd/t700/CT1000T700SSD3
+            4. https://www.amazon.com/Seagate-FireCuda-Internal-Solid-State/dp/B0977LW48F?th=1
+            5. https://www.samsung.com/us/computing/memory-storage/solid-state-drives/980-pro-pcie-4-0-nvme-ssd-1tb-mz-v8p1t0b-am/
+            6. https://www.crucial.com/products/ssd/crucial-mx500-ssd
+            7. https://shop.sandisk.com/en-in/products/ssd/internal-ssd/wd-blue-sn5000-nvme-ssd?sku=WDS500G4B0E-00CNZ0
+            
+            -->
     </footer>
 </body>
 </html>

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css"> <!-- the main css stylesheet here -->
-    <link rel="stylesheet" href="./css/games.css"> <!-- css stylesheet for the upcoming games -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
-	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <title>Coming Soon - Florem Game Center</title>
-</head>
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/styles.css"> <!-- update: everything in the stylesheet is one single css file to cut costs -->
+    	<link rel="preconnect" href="https://fonts.googleapis.com">
+    	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+		<link rel="manifest" href="./site.webmanifest">
+    	<title>Coming Soon - Florem Game Center</title>
+	</head>
 <body>
     <header>
         <section id="title-bar"> <!-- the branding of the website -->
-            <img src="./img/logo-256x256.png" alt="Logo of Florem Game Center">
+			<picture class="logo">
+                <source media="(min-width: 128px)" srcset="./img/logo-128x128.png">
+                <source media="(min-width: 64px)" srcset="./img/logo-64x64.png">
+                <source media="(min-width: 32px)" srcset="./img/logo-32x32.png">
+                <img src="./img/logo-32x32.png" alt="Logo of Florem Game Center">
+            </picture>
             <h1 class="title">Florem Game Center</h1>
             <a class="button" href="./login.html">Log In</a>
         </section>
@@ -29,76 +34,123 @@
         </nav>
     </header>
     <main>
-        <h2 class="title">Coming Soon in Florem Game Center</h2>
         <div class="description">
-            These are the collection of games which have their release date set and their trailers launched.
+            These are the collection of games which have their release date set and their trailers launched. We receive information from interviews, serveys, and even the information stored on the web, provided by trusted game retailers and game development companies, to make sure every information you receive is accurate and cerified by actual game developers, so you can get the best of everything without ever feeling lost on a single game update.
         </div>
-        <div class="content-placeholder"> <!--Intended for flex use in CSS-->
-			<div class="content">
-				<img class="content-banner" src="./img/upcoming-games/gta-vi.jpeg" alt="Grand Theft Auto VI">
-				<div class="content-title">Grand Theft Auto VI</div>
-				<div class="content-stats">
-					<div class="content-author">Rockstar Games</div>
-					<div class="content-population">Release date: Yet to be announced</div>
+        <h2 class="title">Coming Soon in Florem Game Center</h2>
+        <div class="list"> <!--Intended for flex use in CSS-->
+			<div class="list-item">
+				<picture class="list-item-picture">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/gta-vi-list-thumbnail.png" type="image/png">
+					<img class="list-item-picture" src="./img/upcoming-games/gta-vi-list-thumbnail.jpg" alt="Image of Grand Theft Auto VI">
+				</picture>
+				<div class="list-item-title">Grand Theft Auto VI</div>
+				<div class="list-item-stats">
+					<div class="author">Rockstar Games</div>
+					<div class="rating">Release date: Yet to be announced</div>
 				</div>
-				<a href="#" class="content-button">Add to wishlist</a>
-				<div class="content-description">Easily the most widely-anticipated launch expected in 2025, Rockstar is returning to Vice City with a Bonnie and Clyde-inspired crime couple. So long as there aren't any delays, and there yet may be, this will be the biggest launch of the calendar year—but no PC release date has been announced.</div>
+				<p class="list-item-buttons">
+					<a href="#" class="content-button">Add to wishlist</a>
+				</p>
+				<div class="list-item-description">Easily the most widely-anticipated launch expected in 2025, Rockstar is returning to Vice City with a Bonnie and Clyde-inspired crime couple. So long as there aren't any delays, and there yet may be, this will be the biggest launch of the calendar year—but no PC release date has been announced.</div>
 			</div>
-			<div class="content">
-				<img class="content-banner" src="./img/upcoming-games/doom-the-dark-ages.webp" alt="Doom: The Dark Ages">
-				<div class="content-title">Doom: The Dark Ages</div>
-				<div class="content-stats">
-					<div class="content-author">id Software, Bethesda Softworks</div>
-					<div class="content-population">Release Date: Yet to be announced</div>
+			<div class="list-item">
+				<picture class="list-item-picture">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/doom-the-dark-ages-list-thumbnail.webp" type="image/webp">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/doom-the-dark-ages-list-thumbnail.png" type="image/png">
+					<img class="list-item-picture" src="./img/upcoming-games/doom-the-dark-ages-list-thumbnail.jpg" alt="Image of Doom: The Dark Ages">
+				</picture>
+				<div class="list-item-title">Doom: The Dark Ages</div>
+				<div class="list-item-stats">
+					<div class="author">id Software, Bethesda Softworks</div>
+					<div class="rating">Release Date: Yet to be announced</div>
 				</div>
-				<a href="#" class="content-button">Add to wishlist</a>
-				<div class="content-description">The next part of one of the most influential FPS series is yanking Doom guy back to a grim fantasy medieval-like prequel setting in The Dark Ages. With any luck, this will be the third great Doom game in a decade.</div>
+				<p class="list-item-buttons">
+					<a href="#" class="content-button">Add to wishlist</a>
+				</p>
+				<div class="list-item-description">The next part of one of the most influential FPS series is yanking Doom guy back to a grim fantasy medieval-like prequel setting in The Dark Ages. With any luck, this will be the third great Doom game in a decade.</div>
 			</div>
-			<div class="content">
-				<img class="content-banner" src="./img/upcoming-games/civilization-vii.jpeg" alt="Civilization 7">
-				<div class="content-title">Civilization 7</div>
-				<div class="content-stats">
-					<div class="content-author">Firaxis Games</div>
-					<div class="content-population">Release Date: February 11, 2025</div>
+			<div class="list-item">
+				<picture class="list-item-picture">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/civilization-vii-list-thumbnail.png" type="image/png">
+					<img class="list-item-picture" src="./img/upcoming-games/civilization-vii-list-thumbnail.jpeg" alt="Image of Sid Meier's Civilization VII">
+				</picture>
+				<div class="list-item-title">Sid Meier's Civilization 7</div>
+				<div class="list-item-stats">
+					<div class="author">Firaxis Games</div>
+					<div class="rating">Release Date: February 11, 2025</div>
 				</div>
-				<a href="#" class="content-button">Add to wishlist</a>
-				<div class="content-description">The next game in this foundational 4X series is bringing big changes to Civilization. This time Firaxis is focused on a "layered" approach to history with fewer, longer ages and morphing into a new civilization at the dawn of each age.</div>
+				<p class="list-item-buttons">
+					<a href="#" class="content-button">Add to wishlist</a>
+				</p>
+				<div class="list-item-description">The next game in this foundational 4X series is bringing big changes to Civilization. This time Firaxis is focused on a "layered" approach to history with fewer, longer ages and morphing into a new civilization at the dawn of each age.</div>
 			</div>
-			<div class="content">
-				<img class="content-banner" src="./img/upcoming-games/avowed.jpg" alt="Avowed">
-				<div class="content-title">Avowed</div>
-				<div class="content-stats">
-					<div class="content-author">Obsidian Entertainment</div>
-					<div class="content-population">Release date: February 18, 2025</div>
+			<div class="list-item">
+				<picture class="list-item-picture">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/avowed-list-thumbnail-2.png" type="image/png">
+					<img class="list-item-picture" src="./img/upcoming-games/avowed-list-thumbnail-2.jpg" alt="Image of Avowed">
+				</picture>
+				<div class="list-item-title">Avowed</div>
+				<div class="list-item-stats">
+					<div class="author">Obsidian Entertainment</div>
+					<div class="rating">Release date: February 18, 2025</div>
 				</div>
-				<a href="#" class="content-button">Add to wishlist</a>
-				<div class="content-description">Obsidian's next major RPG is an open-world fantasy set in the Pillars of Eternity universe. Though Obsidian may not want everyone to call this its version of Skyrim, it sort of is. More importantly though, we think the differences make it compelling.</div>
+				<p class="list-item-buttons">
+					<a href="#" class="content-button">Add to wishlist</a>
+				</p>
+				<div class="list-item-description">Obsidian's next major RPG is an open-world fantasy set in the Pillars of Eternity universe. Though Obsidian may not want everyone to call this its version of Skyrim, it sort of is. More importantly though, we think the differences make it compelling.</div>
 			</div>
-			<div class="content">
-				<img class="content-banner" src="./img/upcoming-games/monster-hunter-wilds.jpeg" alt="Monster Hunter Wilds">
-				<div class="content-title">Monster Hunter Wilds</div>
-				<div class="content-stats">
-					<div class="content-author">Capcom</div>
-					<div class="content-population">Release Date: February 28, 2025</div>
+			<div class="list-item">
+				<picture class="list-item-picture">
+					<source media="(min-width: 150px)" srcset="./img/upcoming-games/monster-hunter-wilds-2-list-thumbnail.png" type="image/png">
+					<img class="list-item-picture" src="./img/upcoming-games/monster-hunter-wilds-2-list-thumbnail.jpg" alt="Image of Monster Hunter Wilds">
+				</picture>
+				<div class="list-item-title">Monster Hunter Wilds</div>
+				<div class="list-item-stats">
+					<div class="author">Capcom</div>
+					<div class="rating">Release Date: February 28, 2025</div>
 				</div>
-				<a href="#" class="content-button">Add to wishlist</a>
-				<div class="content-description">Wilds looks like it may be the cherry on top of a several year run of great Monster Hunter games. It looks like the evolution from Monster Hunter World that we were hoping for with a more responsive, simulated open world of monsters to hunt.</div>
+				<p class="list-item-buttons">
+					<a href="#" class="content-button">Add to wishlist</a>
+				</p>
+				<div class="list-item-description">Wilds looks like it may be the cherry on top of a several year run of great Monster Hunter games. It looks like the evolution from Monster Hunter World that we were hoping for with a more responsive, simulated open world of monsters to hunt.</div>
 			</div>
 		</div>
     </main>
     <footer>
-        <div class="socials">
+		<div id="main-text">
+            Trusted by the world's most popular game and game merchandise companies:
+        </div>
+        <div id="trusted-companies-and-sponsorships">
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Bandai_Namco_Holdings_stacked_logo_(2022).jpg" alt="Bandai Namco Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/electronic-arts-1-logo-png-transparent.jpg" alt="Electronic Arts Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/microsoft-game-studios-vector-logo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/microsoft-game-studios-vector-logo.jpg" alt="Microsoft Game Studios Vector Logo">
+            </picture>
+            <picture>
+                <source media="(min-width: 100px)" srcset="./img/trusted-company-logos/Nintendo.png" type="image/png">
+                <img class="picture" src="./img/trusted-company-logos/Nintendo.jpg" alt="Nintendo Logo">
+            </picture>
+        </div>
+        <div id="socials">
             Follow us on: 
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
-        <div class="terms">
+        <div id="terms">
             <a href="#">Terms and Conditions</a>
             <a href="#">Privacy</a>
         </div>
-        <div id="copyright">&copy;2024 Florem Game Store. All rights reserved.</div>
+        <div id="copyright">&copy;2025 Florem Game Electronics. All rights reserved.</div>
 		<!--
 		Source:
 		- https://www.pcgamer.com/games/new-games-2025-upcoming-pc-release-schedule/
