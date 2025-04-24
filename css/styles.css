@@ -655,20 +655,21 @@ main h2.title {
     font-style: italic;
 }
 
-section.landing-section {
+div.landing-section {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
-section.landing-section .landing-image {
-    grid-column: 1/1;
+div.landing-section .landing-image {
+    grid-column: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: var(--padding-and-gap);
 }
 
-section.landing-section p {
+div.landing-section div {
+    grid-column: 2;
     font-size: 1.5rem;
     font-style: italic;
     text-align: left;
@@ -676,7 +677,7 @@ section.landing-section p {
     border-radius: var(--padding-and-gap);
 }
 
-main,section.landing-section {
+main,div.landing-section {
     padding: var(--padding-and-gap);
     gap: var(--padding-and-gap);
 }

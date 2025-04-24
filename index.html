@@ -17,7 +17,6 @@
     <title>Florem Game Center - The Original</title>
 </head>
 <body>
-    <script src="./main.js" defer></script>
     <header>
         <section> <!-- the branding of the website -->
             <picture class="logo">
@@ -39,15 +38,17 @@
         </nav>
     </header>
     <main>
-        <section class="landing-section">
+        <div class="landing-section">
             <picture class="landing-image">
+                <source media="(min-width: 300px)" srcset="./img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.webp" type="image/webp">
+                <source media="(min-width: 300px)" srcset="./img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.png" type="image/png">
                 <img class="landing-image" src="./img/landing-images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Game arcade consoles with lit-up screens in an actual game store at night">
             </picture>
-            <p>
-                Hello, there! Welcome to the Florem Game Center, your one stop for all your gaming needs! Play some games, get rewards, make friends, and be one of the best gamers ever to flourish on this wonderful electrified garden!<br/>
-                At Florem Game Center, we're committed to giving you the latest games and their recent updates, catered and served in one website for easy access, so you can have more fun while playing games! We've been serving games for fun since 2022, and we're eager to say we're still staying strong. We hope you have fun playing games! Happy gaming!
-            </p>
-        </section>
+            <div>
+                <p>Hello, there! Welcome to the Florem Game Center, your one stop for all your gaming needs! Play some games, get rewards, make friends, and be one of the best gamers ever to flourish on this wonderful electrified garden!</p>
+                <p>At Florem Game Center, we're committed to giving you the latest games and their recent updates, catered and served in one website for easy access, so you can have more fun while playing games! We've been serving games for fun since 2022, and we're eager to say we're still staying strong. We hope you have fun playing games! Happy gaming!</p>
+            </div>
+        </div>
         <section class="services">
             <h2 class="title">Our services</h2>
             <ul class="service-list">
