@@ -614,7 +614,7 @@ header section {
 }
 
 header picture.logo {
-    width: 128px; height: 128px;
+    width: 128px;
     object-fit: cover;
 }
 
@@ -765,6 +765,30 @@ footer div#copyright {
     text-align: center;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
+    header h1.title {
+        font-size: 1.5em;
+    }
+
+    header section .logo{
+        width: 64px;
+    }
     
+    header .button {
+        font-size: 12px;
+    }
+
+    header section a.button {
+        font-size: 12px;
+    }
+
+    main .landing-section{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    main .landing-section .landing-image {
+        max-width: 100%;
+        height: auto;
+    }
 }
