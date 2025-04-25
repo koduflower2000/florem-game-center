@@ -127,7 +127,7 @@ function buyNow(id){
         cart.push({id,title:currentTitle,quantity:1,price:currentPrice});
     }
     localStorage.setItem("cart",JSON.stringify(cart));
-    window.location.href = "./payment/index.html";
+    window.location.href = "./payments/index.html";
 }
 
 // add to favorites
