@@ -772,10 +772,11 @@ footer div#copyright {
 
     header section .logo{
         width: 64px;
+        height: 64px;
     }
     
     header .button {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     header section a.button {
