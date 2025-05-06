@@ -37,7 +37,7 @@
     color: var(--color-08);
 }
 
-.button:hover,.content-button:hover {
+.button:hover,.content-button:hover,.button:active,.content-button:active {
     color: var(--color-12);
     border: 2px solid var(--color-09);
     animation: move 250ms;
@@ -397,6 +397,8 @@
     grid-row: 4;
     display: flex;
     align-items: center;
+    gap: var(--padding-and-gap);
+    margin: 0;
 }
 
 .list-item-author { color: var(--color-08); }
@@ -768,22 +770,48 @@ footer div#copyright {
     text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
+    body header {
+        width: 100vw;
+    }
+
+    body main,footer {
+        width: 95vw;
+    }
+
+    body footer {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    body footer * {
+        width: 95vw;
+    }
+
+    body footer div#trusted-companies-and-sponsorships picture {
+        width: fit-content;
+    }
+
     header h1.title {
         font-size: 1.5em;
     }
 
-    header section .logo{
+    header picture.logo {
         width: 64px;
         height: 64px;
     }
-    
+
+    header picture.logo source,img {
+        width: 64px;
+    }
+
     header .button {
         font-size: 14px;
+        padding: 7px 14px;
     }
 
     header section a.button {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     main .landing-section{
@@ -794,5 +822,83 @@ footer div#copyright {
     main .landing-section .landing-image {
         max-width: 100%;
         height: auto;
+    }
+
+    main h2.title {
+        width: auto;
+    }
+
+    .list-item {
+        width: auto;
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+    }
+
+    .list-item .list-item-picture {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .list-item .list-item-title {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .list-item .list-item-stats {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .list-item .list-item-buttons {
+        grid-column: 1;
+        grid-row: 5;
+        margin: 0 auto;
+    }
+
+    .list-item-description {
+        grid-column: 1;
+        grid-row: 3;
+        height: fit-content;
+    }
+
+    .search-filter {
+        width: 90vw;
+        margin: 0;
+    }
+
+    .search-filter .button {
+        font-size: 14px;
+
+    }
+
+    .content-placeholder {
+        width: 95vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    
+    .content-banner {
+        width: 100%;
+        height: 100%;
+    }
+
+    #cart-and-favorites {
+        width: 95vw;
+    }
+
+    .forums {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .contact-info-table table,.privilege-table table {
+        font-size: 14px;
+    }
+
+    .contact-info-table table tr td,.privilege-table table tr td {
+        padding: 5px 10px;
     }
 }
